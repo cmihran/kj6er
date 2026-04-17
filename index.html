@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KJ6ER &middot; Amateur Radio &middot; Free Antenna Plans</title>
+  <meta name="description" content="KJ6ER's ham radio project: free antenna plans and updates from the shack." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="qsl-card">
+      <div class="qsl-corner qsl-corner--tl">RADIO</div>
+      <div class="qsl-corner qsl-corner--tr">STATION</div>
+      <div class="qsl-corner qsl-corner--bl">CALIFORNIA &middot; USA</div>
+      <div class="qsl-corner qsl-corner--br">GRID CM87</div>
+
+      <p class="hero__eyebrow">CQ CQ CQ DE</p>
+      <h1 class="hero__callsign">KJ6ER</h1>
+      <p class="hero__tagline">Amateur Radio &middot; Antenna Builder &middot; Elmer</p>
+
+      <!--
+        Hero image: drop a file at /assets/hero.jpg (or .png) and uncomment below.
+        Recommended size: 1200x600, landscape. Keep it under ~300KB.
+      -->
+      <!-- <img class="hero__image" src="assets/hero.jpg" alt="KJ6ER at the shack" /> -->
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Intro / bio ===== -->
+    <section class="panel" id="about">
+      <h2 class="panel__title">&gt; about</h2>
+      <p>
+        Hi, I'm KJ6ER. I've been licensed since the 1970s and I build wire
+        antennas in my backyard. This site is where I share what works,
+        what doesn't, and the plans I've drawn up for other hams who want
+        to put more signal out with less money.
+      </p>
+      <p>
+        All plans here are free to download. If you build one, I'd love to
+        hear about it &mdash; drop me a line or sign up for the mailing
+        list and I'll send a note when I post something new.
+      </p>
+    </section>
+
+    <!-- ===== Free antenna plans ===== -->
+    <section class="panel" id="plans">
+      <h2 class="panel__title">&gt; free antenna plans</h2>
+      <p class="panel__lead">
+        PDFs, free forever. Click to download.
+      </p>
+
+      <ul class="plans">
+        <!--
+          To add a new plan: copy one <li> block below and update:
+            - href:  the bit.ly (or other) link to the PDF
+            - name:  title of the plan
+            - specs: short one-line description (bands, length, etc.)
+        -->
+        <li class="plan">
+          <a class="plan__link" href="https://bit.ly/REPLACE-ME-1" target="_blank" rel="noopener">
+            <span class="plan__name">40m Off-Center-Fed Dipole</span>
+            <span class="plan__specs">40 / 20 / 10m &middot; ~66 ft &middot; 4:1 balun</span>
+            <span class="plan__cta">Download PDF &rarr;</span>
+          </a>
+        </li>
+        <li class="plan">
+          <a class="plan__link" href="https://bit.ly/REPLACE-ME-2" target="_blank" rel="noopener">
+            <span class="plan__name">End-Fed Half-Wave, 80&ndash;10m</span>
+            <span class="plan__specs">Multi-band &middot; ~135 ft &middot; 49:1 unun</span>
+            <span class="plan__cta">Download PDF &rarr;</span>
+          </a>
+        </li>
+        <li class="plan">
+          <a class="plan__link" href="https://bit.ly/REPLACE-ME-3" target="_blank" rel="noopener">
+            <span class="plan__name">2m / 70cm Roll-Up J-Pole</span>
+            <span class="plan__specs">Portable VHF/UHF &middot; 300-ohm twinlead</span>
+            <span class="plan__cta">Download PDF &rarr;</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="panel__note">
+        Tip: right-click &rarr; &ldquo;Save link as&hellip;&rdquo; to save the PDF locally.
+      </p>
+    </section>
+
+    <!-- ===== Email signup ===== -->
+    <section class="panel panel--accent" id="subscribe">
+      <h2 class="panel__title">&gt; join the mailing list</h2>
+      <p class="panel__lead">
+        Occasional updates when I post a new plan or build log. No spam, 73.
+      </p>
+
+      <!--
+        This form is a PLACEHOLDER. To wire it up:
+        1. Pick a service: Formspree, Buttondown, Mailchimp, etc.
+        2. Replace action= with the provider's endpoint URL.
+        3. Remove data-placeholder="true" from the <form> tag.
+        The JS in script.js keys off data-placeholder to show a friendly
+        "not wired up yet" message instead of submitting.
+      -->
+      <form class="signup" action="#" method="POST" data-placeholder="true" novalidate>
+        <label class="signup__label" for="email">Email address</label>
+        <div class="signup__row">
+          <input
+            class="signup__input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+          <button class="signup__button" type="submit">Subscribe</button>
+        </div>
+        <p class="signup__status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="panel" id="contact">
+      <h2 class="panel__title">&gt; contact</h2>
+      <ul class="contact">
+        <li>
+          <span class="contact__key">email</span>
+          <!-- TODO: replace with real email when ready -->
+          <a class="contact__val" href="mailto:kj6er@example.com">kj6er@example.com</a>
+        </li>
+        <li>
+          <span class="contact__key">qrz</span>
+          <a class="contact__val" href="https://www.qrz.com/db/KJ6ER" target="_blank" rel="noopener">qrz.com/db/KJ6ER</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> KJ6ER &middot; 73</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

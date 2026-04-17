@@ -1,0 +1,360 @@
+/* =========================================================
+   KJ6ER - retro QSL-card / amateur radio theme
+   Mobile-first. Fluid type. Minimal overrides at breakpoints.
+   ========================================================= */
+
+:root {
+  /* Palette: warm amber-on-ink, like a vintage CRT + QSL card */
+  --ink: #1a140d;
+  --ink-2: #241b10;
+  --paper: #f3e6c4;
+  --paper-2: #e8d6a6;
+  --amber: #ffb000;
+  --amber-dim: #c88600;
+  --accent: #c23b22;     /* QSL red */
+  --accent-dim: #8a2a18;
+  --rule: rgba(255, 176, 0, 0.25);
+
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --crt:  "VT323", "IBM Plex Mono", ui-monospace, monospace;
+  --type: "Special Elite", "IBM Plex Mono", Georgia, serif;
+
+  --radius: 4px;
+  --maxw: 720px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at top, #2a1f12 0%, var(--ink) 55%, #0e0905 100%);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: clamp(15px, 1.6vw + 10px, 17px);
+  line-height: 1.6;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--amber);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+a:hover { color: #ffd870; }
+a:focus-visible {
+  outline: 2px dashed var(--amber);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Subtle CRT scanlines over the whole page */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.12) 3px,
+    rgba(0, 0, 0, 0) 4px
+  );
+  mix-blend-mode: multiply;
+  z-index: 100;
+}
+
+/* =========================================================
+   Hero / QSL card
+   ========================================================= */
+.hero {
+  padding: 24px 16px 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.qsl-card {
+  position: relative;
+  width: 100%;
+  max-width: var(--maxw);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.04) 0 8px,
+      rgba(0,0,0,0) 8px 16px
+    ),
+    linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 44px 20px 28px;
+  text-align: center;
+  box-shadow:
+    0 0 0 6px var(--paper),
+    0 0 0 8px var(--ink),
+    0 18px 40px rgba(0, 0, 0, 0.55);
+  font-family: var(--type);
+}
+
+.qsl-corner {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.7;
+}
+.qsl-corner--tl { top: 10px; left: 14px; }
+.qsl-corner--tr { top: 10px; right: 14px; }
+.qsl-corner--bl { bottom: 10px; left: 14px; }
+.qsl-corner--br { bottom: 10px; right: 14px; }
+
+.hero__eyebrow {
+  font-family: var(--mono);
+  letter-spacing: 0.3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  color: var(--accent);
+}
+.hero__callsign {
+  font-family: var(--crt);
+  font-size: clamp(56px, 16vw, 128px);
+  line-height: 0.9;
+  margin: 4px 0 4px;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  text-shadow:
+    2px 2px 0 var(--accent),
+    4px 4px 0 rgba(0,0,0,0.15);
+}
+.hero__tagline {
+  font-family: var(--type);
+  font-size: clamp(14px, 2.4vw, 18px);
+  margin: 0;
+  color: var(--ink-2);
+}
+.hero__image {
+  display: block;
+  margin: 20px auto 0;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  filter: sepia(0.15) contrast(1.02);
+}
+
+/* =========================================================
+   Panels / main content
+   ========================================================= */
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.panel {
+  background: rgba(255, 246, 220, 0.03);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  margin: 20px 0;
+}
+.panel--accent {
+  border-color: var(--amber-dim);
+  background:
+    linear-gradient(180deg, rgba(255,176,0,0.07), rgba(255,176,0,0.02));
+}
+
+.panel__title {
+  font-family: var(--crt);
+  font-size: clamp(22px, 4.5vw, 30px);
+  color: var(--amber);
+  margin: 0 0 12px;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 8px rgba(255, 176, 0, 0.35);
+}
+
+.panel__lead {
+  margin-top: 0;
+  color: #f5e3b9;
+}
+.panel__note {
+  font-size: 13px;
+  color: #c9b482;
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   Plans list
+   ========================================================= */
+.plans {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.plan__link {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name cta"
+    "specs cta";
+  gap: 2px 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--paper);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+.plan__link:hover,
+.plan__link:focus-visible {
+  border-color: var(--amber);
+  background: rgba(255, 176, 0, 0.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.plan__name {
+  grid-area: name;
+  font-weight: 600;
+  color: var(--amber);
+  font-size: 1.02em;
+}
+.plan__specs {
+  grid-area: specs;
+  font-size: 0.88em;
+  color: #c9b482;
+}
+.plan__cta {
+  grid-area: cta;
+  font-family: var(--crt);
+  font-size: 1.2em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* Single-column on very narrow screens */
+@media (max-width: 380px) {
+  .plan__link {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "specs"
+      "cta";
+  }
+  .plan__cta { justify-self: start; }
+}
+
+/* =========================================================
+   Signup form
+   ========================================================= */
+.signup { margin-top: 10px; }
+
+.signup__label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c9b482;
+  margin-bottom: 6px;
+}
+
+.signup__row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.signup__input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 12px 14px;
+  background: #0b0804;
+  color: var(--paper);
+  font: inherit;
+  border: 1px solid var(--amber-dim);
+  border-radius: var(--radius);
+}
+.signup__input:focus {
+  outline: none;
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(255, 176, 0, 0.2);
+}
+
+.signup__button {
+  padding: 12px 18px;
+  background: var(--amber);
+  color: var(--ink);
+  border: 1px solid var(--amber);
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.08s ease;
+}
+.signup__button:hover { background: #ffd870; }
+.signup__button:active { transform: translateY(1px); }
+
+.signup__status {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+  font-size: 0.92em;
+  color: var(--amber);
+}
+.signup__status.is-error { color: #ff8a73; }
+
+/* =========================================================
+   Contact
+   ========================================================= */
+.contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.contact li {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: baseline;
+  gap: 12px;
+}
+.contact__key {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c9b482;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.footer {
+  text-align: center;
+  padding: 20px 16px 40px;
+  font-size: 13px;
+  color: #c9b482;
+}
+
+/* =========================================================
+   Motion / prefers-reduced-motion
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .plan__link { transition: none; }
+  .scanlines { display: none; }
+}
