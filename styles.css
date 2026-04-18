@@ -256,9 +256,9 @@ main {
 }
 
 /* =========================================================
-   Plans — grouped, searchable
+   Plans — grouped, searchable, scrollable card
    ========================================================= */
-.plans-toolbar { margin: 6px 0 18px; }
+.plans-toolbar { margin: 6px 0 14px; }
 
 .plans-search {
   display: flex;
@@ -286,8 +286,28 @@ main {
 }
 .plans-search__input::placeholder { color: var(--muted-2); font-style: italic; }
 
-.plan-group { margin: 26px 0; }
-.plan-group:first-child { margin-top: 10px; }
+#plans-container {
+  max-height: min(62vh, 560px);
+  overflow-y: auto;
+  padding: 14px 18px;
+  border: 1px solid var(--rule);
+  background: var(--paper-2);
+  border-radius: var(--radius);
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+}
+#plans-container::-webkit-scrollbar { width: 10px; }
+#plans-container::-webkit-scrollbar-track { background: transparent; }
+#plans-container::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 999px;
+  border: 2px solid var(--paper-2);
+}
+#plans-container::-webkit-scrollbar-thumb:hover { background: var(--copper); }
+
+.plan-group { margin: 22px 0; }
+.plan-group:first-child { margin-top: 4px; }
+.plan-group:last-child { margin-bottom: 4px; }
 
 .plan-group__title {
   display: flex;
@@ -474,6 +494,18 @@ main {
   outline: none;
 }
 .shop__cta:active { transform: translateY(1px); }
+
+.shop__cta--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.shop__cta--ghost:hover,
+.shop__cta--ghost:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
 
 /* =========================================================
    Contact
