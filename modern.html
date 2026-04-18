@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KJ6ER &middot; Antenna Geeks &middot; Free Antenna Plans</title>
+  <meta name="description" content="KJ6ER's ham radio project: free antenna plans and the Antenna Geeks mailing list." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="modern.css" />
+</head>
+<body data-variant="modern">
+
+  <nav class="nav" aria-label="primary">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top">
+        <span class="nav__callsign">KJ6ER</span>
+        <span class="nav__sub">Amateur Radio</span>
+      </a>
+      <div class="nav__links">
+        <a href="#subscribe">Mailing list</a>
+        <a href="#plans">Plans</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav__toggle" data-style-toggle href="index.html" title="Switch to retro view">
+          Retro view <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">KJ6ER &middot; Since 1977</p>
+      <h1 class="hero__title">Free antenna plans, built and tested.</h1>
+      <p class="hero__lede">
+        Open designs for wire dipoles, verticals, end-feds, loops, and portable gear &mdash;
+        all free to download.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#plans">Browse plans</a>
+        <a class="btn btn--ghost" href="#subscribe">Join Antenna Geeks</a>
+      </div>
+      <!--
+        Hero image: drop assets/hero.jpg and uncomment to use.
+        Landscape, ~1600x900, under ~400KB.
+      -->
+      <!-- <img class="hero__image" src="assets/hero.jpg" alt="KJ6ER at the shack" /> -->
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Antenna Geeks email signup (moved above plans) ===== -->
+    <section class="section section--accent" id="subscribe">
+      <div class="section__head">
+        <p class="section__eyebrow">Mailing list</p>
+        <h2 class="section__title">Join Antenna Geeks</h2>
+        <p class="section__lede">
+          Occasional notes when a new plan or build log is up. No spam, unsubscribe anytime.
+        </p>
+      </div>
+
+      <!--
+        PLACEHOLDER form. To wire it up:
+        1. Pick a provider (Formspree, Buttondown, Mailchimp, etc.)
+        2. Replace action="#" with their endpoint URL.
+        3. Remove data-placeholder="true".
+      -->
+      <form class="signup" action="#" method="POST" data-placeholder="true" novalidate>
+        <label class="signup__label" for="email">Email address</label>
+        <div class="signup__row">
+          <input
+            class="signup__input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+          <button class="signup__button" type="submit">Join</button>
+        </div>
+        <p class="signup__status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ===== Antenna plans ===== -->
+    <section class="section" id="plans">
+      <div class="section__head">
+        <p class="section__eyebrow">Library</p>
+        <h2 class="section__title">Antenna plans</h2>
+        <p class="section__lede">
+          <span id="plans-total">&mdash;</span> free PDFs, grouped by type. Click any card to download.
+        </p>
+
+        <div class="plans-toolbar">
+          <label class="plans-search" for="plans-search">
+            <svg class="plans-search__icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              id="plans-search"
+              class="plans-search__input"
+              type="search"
+              placeholder="Search plans by name, band, or category..."
+              autocomplete="off"
+            />
+          </label>
+        </div>
+      </div>
+
+      <!-- Plans render here from plans.js -->
+      <div id="plans-container"></div>
+      <p id="plans-empty" class="section__note" hidden>No plans match that filter.</p>
+
+      <p class="section__note">
+        Tip: right-click &rarr; &ldquo;Save link as&hellip;&rdquo; to save a PDF locally.
+      </p>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <p class="section__eyebrow">About</p>
+        <h2 class="section__title">About KJ6ER</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Hi, I'm KJ6ER. I've been licensed since the 1970s and I build wire
+          antennas in my backyard. This site is where I share what works, what
+          doesn't, and the plans I've drawn up for other hams who want to put
+          more signal out with less money.
+        </p>
+        <p>
+          All plans here are free. If you build one, I'd love to hear about
+          it &mdash; drop me a line or join the mailing list and I'll send a
+          note when I post something new.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="section__head">
+        <p class="section__eyebrow">Contact</p>
+        <h2 class="section__title">Get in touch</h2>
+      </div>
+      <ul class="contact">
+        <li>
+          <span class="contact__key">Email</span>
+          <!-- TODO: replace with real email when ready -->
+          <a class="contact__val" href="mailto:kj6er@example.com">kj6er@example.com</a>
+        </li>
+        <li>
+          <span class="contact__key">QRZ</span>
+          <a class="contact__val" href="https://www.qrz.com/db/KJ6ER" target="_blank" rel="noopener">qrz.com/db/KJ6ER</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand">KJ6ER</p>
+      <p class="footer__meta">&copy; <span id="year"></span> &middot; 73</p>
+    </div>
+  </footer>
+
+  <script src="plans.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

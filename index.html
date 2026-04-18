@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KJ6ER &middot; Amateur Radio &middot; Free Antenna Plans</title>
-  <meta name="description" content="KJ6ER's ham radio project: free antenna plans and updates from the shack." />
+  <title>KJ6ER &middot; Antenna Geeks &middot; Free Antenna Plans</title>
+  <meta name="description" content="KJ6ER's ham radio project: free antenna plans and the Antenna Geeks mailing list." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-variant="retro">
   <div class="scanlines" aria-hidden="true"></div>
+
+  <a class="style-toggle" data-style-toggle href="modern.html" title="Switch to modern view">
+    <span class="style-toggle__label">view</span>
+    <span class="style-toggle__value">modern &rarr;</span>
+  </a>
 
   <header class="hero">
     <div class="qsl-card">
@@ -44,58 +49,16 @@
       </p>
       <p>
         All plans here are free to download. If you build one, I'd love to
-        hear about it &mdash; drop me a line or sign up for the mailing
-        list and I'll send a note when I post something new.
+        hear about it &mdash; drop me a line or join Antenna Geeks and
+        I'll send a note when I post something new.
       </p>
     </section>
 
-    <!-- ===== Free antenna plans ===== -->
-    <section class="panel" id="plans">
-      <h2 class="panel__title">&gt; free antenna plans</h2>
-      <p class="panel__lead">
-        PDFs, free forever. Click to download.
-      </p>
-
-      <ul class="plans">
-        <!--
-          To add a new plan: copy one <li> block below and update:
-            - href:  the bit.ly (or other) link to the PDF
-            - name:  title of the plan
-            - specs: short one-line description (bands, length, etc.)
-        -->
-        <li class="plan">
-          <a class="plan__link" href="https://bit.ly/REPLACE-ME-1" target="_blank" rel="noopener">
-            <span class="plan__name">40m Off-Center-Fed Dipole</span>
-            <span class="plan__specs">40 / 20 / 10m &middot; ~66 ft &middot; 4:1 balun</span>
-            <span class="plan__cta">Download PDF &rarr;</span>
-          </a>
-        </li>
-        <li class="plan">
-          <a class="plan__link" href="https://bit.ly/REPLACE-ME-2" target="_blank" rel="noopener">
-            <span class="plan__name">End-Fed Half-Wave, 80&ndash;10m</span>
-            <span class="plan__specs">Multi-band &middot; ~135 ft &middot; 49:1 unun</span>
-            <span class="plan__cta">Download PDF &rarr;</span>
-          </a>
-        </li>
-        <li class="plan">
-          <a class="plan__link" href="https://bit.ly/REPLACE-ME-3" target="_blank" rel="noopener">
-            <span class="plan__name">2m / 70cm Roll-Up J-Pole</span>
-            <span class="plan__specs">Portable VHF/UHF &middot; 300-ohm twinlead</span>
-            <span class="plan__cta">Download PDF &rarr;</span>
-          </a>
-        </li>
-      </ul>
-
-      <p class="panel__note">
-        Tip: right-click &rarr; &ldquo;Save link as&hellip;&rdquo; to save the PDF locally.
-      </p>
-    </section>
-
-    <!-- ===== Email signup ===== -->
+    <!-- ===== Antenna Geeks email signup ===== -->
     <section class="panel panel--accent" id="subscribe">
-      <h2 class="panel__title">&gt; join the mailing list</h2>
+      <h2 class="panel__title">&gt; join antenna geeks</h2>
       <p class="panel__lead">
-        Occasional updates when I post a new plan or build log. No spam, 73.
+        My mailing list. Occasional updates when I post a new plan or build log. No spam, 73.
       </p>
 
       <!--
@@ -118,10 +81,39 @@
             autocomplete="email"
             required
           />
-          <button class="signup__button" type="submit">Subscribe</button>
+          <button class="signup__button" type="submit">Join</button>
         </div>
         <p class="signup__status" role="status" aria-live="polite"></p>
       </form>
+    </section>
+
+    <!-- ===== Free antenna plans ===== -->
+    <section class="panel" id="plans">
+      <h2 class="panel__title">&gt; free antenna plans</h2>
+      <p class="panel__lead">
+        <span id="plans-total">&mdash;</span> free PDFs, grouped by type. Click to download.
+      </p>
+
+      <div class="plans-toolbar">
+        <label class="plans-search" for="plans-search">
+          <span class="plans-search__prompt" aria-hidden="true">$&nbsp;</span>
+          <input
+            id="plans-search"
+            class="plans-search__input"
+            type="search"
+            placeholder="filter by name, band, or category..."
+            autocomplete="off"
+          />
+        </label>
+      </div>
+
+      <!-- Plans render here from plans.js -->
+      <div id="plans-container"></div>
+      <p id="plans-empty" class="panel__note" hidden>No plans match that filter.</p>
+
+      <p class="panel__note">
+        Tip: right-click &rarr; &ldquo;Save link as&hellip;&rdquo; to save a PDF locally.
+      </p>
     </section>
 
     <!-- ===== Contact ===== -->
@@ -145,6 +137,7 @@
     <p>&copy; <span id="year"></span> KJ6ER &middot; 73</p>
   </footer>
 
+  <script src="plans.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,30 +1,124 @@
 // Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Signup form handler.
-// While the form is still a placeholder (no provider wired up), we prevent the
-// submission and show a friendly status. Once you set a real `action=` URL and
-// remove data-placeholder="true", the browser will POST normally.
-(function () {
+// =========================================================
+// Plans rendering
+// =========================================================
+(function renderPlansSection() {
+  const container = document.getElementById("plans-container");
+  if (!container || typeof PLANS === "undefined") return;
+
+  const countEl = document.getElementById("plans-total");
+  if (countEl) countEl.textContent = String(PLANS.length);
+
+  const order = (typeof CATEGORY_ORDER !== "undefined" && CATEGORY_ORDER) || [];
+  const groups = new Map();
+  order.forEach((c) => groups.set(c, []));
+  PLANS.forEach((p) => {
+    if (!groups.has(p.category)) groups.set(p.category, []);
+    groups.get(p.category).push(p);
+  });
+
+  const esc = (s) =>
+    String(s).replace(/[&<>"']/g, (c) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    })[c]);
+
+  let html = "";
+  for (const [category, items] of groups) {
+    if (!items.length) continue;
+    html += `<section class="plan-group" data-category="${esc(category.toLowerCase())}">`;
+    html += `<h3 class="plan-group__title"><span class="plan-group__name">${esc(category)}</span><span class="plan-group__count">${items.length}</span></h3>`;
+    html += `<ul class="plans">`;
+    for (const p of items) {
+      const searchBlob = esc((p.name + " " + p.category + " " + p.specs).toLowerCase());
+      html += `
+        <li class="plan" data-search="${searchBlob}">
+          <a class="plan__link" href="${esc(p.href)}" target="_blank" rel="noopener">
+            <span class="plan__name">${esc(p.name)}</span>
+            <span class="plan__specs">${esc(p.specs)}</span>
+            <span class="plan__cta">Download PDF <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </li>`;
+    }
+    html += `</ul></section>`;
+  }
+  container.innerHTML = html;
+
+  // --- Search ---
+  const searchInput = document.getElementById("plans-search");
+  const emptyMsg = document.getElementById("plans-empty");
+  if (!searchInput) return;
+
+  searchInput.addEventListener("input", () => {
+    const q = searchInput.value.trim().toLowerCase();
+    const plans = container.querySelectorAll(".plan");
+    let visible = 0;
+    plans.forEach((p) => {
+      const match = !q || p.dataset.search.includes(q);
+      p.hidden = !match;
+      if (match) visible++;
+    });
+    container.querySelectorAll(".plan-group").forEach((g) => {
+      const any = Array.from(g.querySelectorAll(".plan")).some((p) => !p.hidden);
+      g.hidden = !any;
+    });
+    if (emptyMsg) emptyMsg.hidden = visible > 0;
+  });
+})();
+
+// =========================================================
+// Signup form placeholder handler
+// =========================================================
+(function signupPlaceholder() {
   const form = document.querySelector(".signup");
   if (!form) return;
-
   const status = form.querySelector(".signup__status");
   const input = form.querySelector(".signup__input");
-
   form.addEventListener("submit", function (e) {
-    if (form.dataset.placeholder === "true") {
-      e.preventDefault();
-      if (!input.value || !input.checkValidity()) {
-        status.textContent = "Please enter a valid email address.";
-        status.classList.add("is-error");
-        input.focus();
-        return;
-      }
-      status.classList.remove("is-error");
-      status.textContent =
-        "Thanks! The list isn't wired up yet — check back soon. 73.";
-      input.value = "";
+    if (form.dataset.placeholder !== "true") return;
+    e.preventDefault();
+    if (!input.value || !input.checkValidity()) {
+      status.textContent = "Please enter a valid email address.";
+      status.classList.add("is-error");
+      input.focus();
+      return;
     }
+    status.classList.remove("is-error");
+    status.textContent =
+      "Thanks! Antenna Geeks isn't wired up yet — check back soon. 73.";
+    input.value = "";
+  });
+})();
+
+// =========================================================
+// Style variant toggle + persistence
+// =========================================================
+(function styleToggle() {
+  const STORAGE_KEY = "kj6er:style";
+  const here =
+    document.body.dataset.variant === "modern" ? "modern" : "retro";
+
+  // Save the user's current view as their preference when they arrive.
+  // Only update when explicitly toggled — see handler below.
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    // First-visit: persist default so the toggle has something to toggle against.
+    if (!saved) localStorage.setItem(STORAGE_KEY, here);
+  } catch (_) {}
+
+  const toggle = document.querySelector("[data-style-toggle]");
+  if (!toggle) return;
+  toggle.addEventListener("click", (e) => {
+    try {
+      const next = here === "modern" ? "retro" : "modern";
+      localStorage.setItem(STORAGE_KEY, next);
+    } catch (_) {}
+    // Let the normal link navigation happen.
   });
 })();

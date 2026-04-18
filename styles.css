@@ -71,6 +71,40 @@ a:focus-visible {
 }
 
 /* =========================================================
+   Style toggle (fixed top-right)
+   ========================================================= */
+.style-toggle {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 101;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--amber-dim);
+  border-radius: var(--radius);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--amber);
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.style-toggle:hover,
+.style-toggle:focus-visible {
+  border-color: var(--amber);
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffd870;
+  outline: none;
+}
+.style-toggle__label { color: #c9b482; font-size: 10px; }
+.style-toggle__value { font-family: var(--crt); font-size: 16px; letter-spacing: 0.08em; }
+
+/* =========================================================
    Hero / QSL card
    ========================================================= */
 .hero {
@@ -193,14 +227,70 @@ main {
 }
 
 /* =========================================================
-   Plans list
+   Plans list (grouped, searchable)
    ========================================================= */
+.plans-toolbar { margin: 8px 0 16px; }
+
+.plans-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  background: #0b0804;
+  border: 1px solid var(--amber-dim);
+  border-radius: var(--radius);
+}
+.plans-search:focus-within {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(255, 176, 0, 0.18);
+}
+.plans-search__prompt {
+  font-family: var(--crt);
+  font-size: 18px;
+  color: var(--amber);
+  line-height: 1;
+}
+.plans-search__input {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: var(--paper);
+  font: inherit;
+}
+.plans-search__input::placeholder { color: #8a7648; }
+
+.plan-group { margin: 18px 0; }
+.plan-group + .plan-group { margin-top: 22px; }
+
+.plan-group__title {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--crt);
+  font-size: clamp(18px, 3.5vw, 22px);
+  color: var(--amber);
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--rule);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.plan-group__name::before { content: "[ "; color: var(--accent); }
+.plan-group__name::after  { content: " ]"; color: var(--accent); }
+.plan-group__count {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #c9b482;
+  margin-left: auto;
+}
+
 .plans {
   list-style: none;
   padding: 0;
-  margin: 8px 0 12px;
+  margin: 0;
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .plan__link {
@@ -211,7 +301,7 @@ main {
     "specs cta";
   gap: 2px 12px;
   align-items: center;
-  padding: 14px 16px;
+  padding: 12px 14px;
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   background: rgba(0, 0, 0, 0.25);
@@ -231,7 +321,6 @@ main {
   grid-area: name;
   font-weight: 600;
   color: var(--amber);
-  font-size: 1.02em;
 }
 .plan__specs {
   grid-area: specs;
@@ -241,12 +330,11 @@ main {
 .plan__cta {
   grid-area: cta;
   font-family: var(--crt);
-  font-size: 1.2em;
+  font-size: 1.15em;
   color: var(--accent);
   white-space: nowrap;
 }
 
-/* Single-column on very narrow screens */
 @media (max-width: 380px) {
   .plan__link {
     grid-template-columns: 1fr;
