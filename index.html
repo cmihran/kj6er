@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KJ6ER &middot; Antenna Geeks &middot; Free Antenna Plans</title>
-  <meta name="description" content="KJ6ER's ham radio project: free antenna plans and the Antenna Geeks mailing list." />
+  <title>KJ6ER &middot; Greg Mihran &middot; Antenna Plans</title>
+  <meta name="description" content="Greg Mihran (KJ6ER) &mdash; portable vertical and wire antenna plans, free. Home of the POTA PERformer, Challenger, and Dominator designs." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-variant="retro">
-  <div class="scanlines" aria-hidden="true"></div>
 
   <a class="style-toggle" data-style-toggle href="modern.html" title="Switch to modern view">
     <span class="style-toggle__label">view</span>
@@ -20,14 +19,18 @@
 
   <header class="hero">
     <div class="qsl-card">
-      <div class="qsl-corner qsl-corner--tl">RADIO</div>
-      <div class="qsl-corner qsl-corner--tr">STATION</div>
-      <div class="qsl-corner qsl-corner--bl">CALIFORNIA &middot; USA</div>
-      <div class="qsl-corner qsl-corner--br">GRID CM87</div>
+      <div class="qsl-corner qsl-corner--tl">Radio Station</div>
+      <div class="qsl-corner qsl-corner--tr">Amateur Extra</div>
+      <div class="qsl-corner qsl-corner--bl">Campbell, CA</div>
+      <div class="qsl-corner qsl-corner--br">Grid CM97</div>
 
-      <p class="hero__eyebrow">CQ CQ CQ DE</p>
+      <p class="hero__eyebrow">Licensed 1987 &middot; ITU Zone 6 &middot; CQ Zone 3</p>
       <h1 class="hero__callsign">KJ6ER</h1>
-      <p class="hero__tagline">Amateur Radio &middot; Antenna Builder &middot; Elmer</p>
+      <p class="hero__name">Greg Mihran</p>
+      <p class="hero__tagline">
+        Free plans for portable verticals and wire antennas &mdash; modeled,
+        built, and field-tested.
+      </p>
 
       <!--
         Hero image: drop a file at /assets/hero.jpg (or .png) and uncomment below.
@@ -38,36 +41,37 @@
   </header>
 
   <main>
-    <!-- ===== Intro / bio ===== -->
+    <!-- ===== About ===== -->
     <section class="panel" id="about">
-      <h2 class="panel__title">&gt; about</h2>
+      <h2 class="panel__title">About</h2>
       <p>
-        Hi, I'm KJ6ER. I've been licensed since the 1970s and I build wire
-        antennas in my backyard. This site is where I share what works,
-        what doesn't, and the plans I've drawn up for other hams who want
-        to put more signal out with less money.
+        I'm Greg Mihran &mdash; KJ6ER. I've been a licensed amateur since
+        1987 and now spend most of my time designing portable vertical
+        antennas for POTA, SOTA, and emergency ops. After forty-five years
+        in Silicon Valley tech, I retired in 2022 and went all-in on the
+        hobby.
       </p>
       <p>
-        All plans here are free to download. If you build one, I'd love to
-        hear about it &mdash; drop me a line or join Antenna Geeks and
-        I'll send a note when I post something new.
+        Everything here is open: I draw up the plans, model them in 4NEC2,
+        build and field-test them, and post the PDFs for free. They're
+        living documents &mdash; I tweak them as I learn more. If you build
+        one, I'd love to hear how it worked out. 73.
       </p>
     </section>
 
     <!-- ===== Antenna Geeks email signup ===== -->
     <section class="panel panel--accent" id="subscribe">
-      <h2 class="panel__title">&gt; join antenna geeks</h2>
+      <h2 class="panel__title">Join Antenna Geeks</h2>
       <p class="panel__lead">
-        My mailing list. Occasional updates when I post a new plan or build log. No spam, 73.
+        My mailing list. A quiet note when a new plan or build log goes up &mdash;
+        nothing else.
       </p>
 
       <!--
-        This form is a PLACEHOLDER. To wire it up:
-        1. Pick a service: Formspree, Buttondown, Mailchimp, etc.
-        2. Replace action= with the provider's endpoint URL.
-        3. Remove data-placeholder="true" from the <form> tag.
-        The JS in script.js keys off data-placeholder to show a friendly
-        "not wired up yet" message instead of submitting.
+        PLACEHOLDER form. To wire it up:
+        1. Pick a provider (Formspree, Buttondown, Mailchimp, etc.)
+        2. Replace action="#" with the provider's endpoint URL.
+        3. Remove data-placeholder="true" below.
       -->
       <form class="signup" action="#" method="POST" data-placeholder="true" novalidate>
         <label class="signup__label" for="email">Email address</label>
@@ -87,21 +91,24 @@
       </form>
     </section>
 
-    <!-- ===== Free antenna plans ===== -->
+    <!-- ===== Antenna plans ===== -->
     <section class="panel" id="plans">
-      <h2 class="panel__title">&gt; free antenna plans</h2>
+      <h2 class="panel__title">Antenna Plans</h2>
       <p class="panel__lead">
-        <span id="plans-total">&mdash;</span> free PDFs, grouped by type. Click to download.
+        <span id="plans-total">&mdash;</span> free PDFs, grouped by type. Click any card to download.
       </p>
 
       <div class="plans-toolbar">
         <label class="plans-search" for="plans-search">
-          <span class="plans-search__prompt" aria-hidden="true">$&nbsp;</span>
+          <svg class="plans-search__icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
           <input
             id="plans-search"
             class="plans-search__input"
             type="search"
-            placeholder="filter by name, band, or category..."
+            placeholder="Filter by name, band, or category..."
             autocomplete="off"
           />
         </label>
@@ -118,23 +125,26 @@
 
     <!-- ===== Contact ===== -->
     <section class="panel" id="contact">
-      <h2 class="panel__title">&gt; contact</h2>
+      <h2 class="panel__title">Contact</h2>
       <ul class="contact">
         <li>
-          <span class="contact__key">email</span>
-          <!-- TODO: replace with real email when ready -->
-          <a class="contact__val" href="mailto:kj6er@example.com">kj6er@example.com</a>
+          <span class="contact__key">Email</span>
+          <a class="contact__val" href="mailto:gmihran@me.com">gmihran@me.com</a>
         </li>
         <li>
-          <span class="contact__key">qrz</span>
+          <span class="contact__key">QRZ</span>
           <a class="contact__val" href="https://www.qrz.com/db/KJ6ER" target="_blank" rel="noopener">qrz.com/db/KJ6ER</a>
+        </li>
+        <li>
+          <span class="contact__key">Location</span>
+          <span class="contact__val">Campbell, CA &middot; Grid CM97</span>
         </li>
       </ul>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; <span id="year"></span> KJ6ER &middot; 73</p>
+    <p>&copy; <span id="year"></span> &middot; KJ6ER &middot; 73</p>
   </footer>
 
   <script src="plans.js"></script>

@@ -1,7 +1,8 @@
 # KJ6ER
 
-Small static site for KJ6ER's ham radio project: an "Antenna Geeks" mailing
-list signup and a library of free antenna plan PDFs (hosted on bit.ly).
+Small static site for Greg Mihran (KJ6ER) — home of the POTA PERformer,
+Challenger, and Dominator antenna plans, plus an "Antenna Geeks" mailing
+list.
 
 Two styles are shipped side-by-side — a retro QSL-card theme and a clean,
 modern theme. Visitors can toggle between them with the button in the
@@ -47,7 +48,7 @@ and visitors can search/filter them live.
 
 - **Bio**: edit the `<section ... id="about">` block in `index.html`
   *and* `modern.html` (they're intentionally separate so the copy can differ).
-- **Contact email**: search for `kj6er@example.com` and replace in both files.
+- **Contact email**: search for `gmihran@me.com` and replace in both files if it changes.
 - **QRZ link**: already set to `https://www.qrz.com/db/KJ6ER` in both files.
 
 ### Add a hero image
