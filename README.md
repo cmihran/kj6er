@@ -12,7 +12,7 @@ Retro / editorial-paper theme. Deployed to GitHub Pages via
 - `index.html` – the page
 - `styles.css` – theme
 - `plans.js` – **the antenna plan data** (edit here to add plans)
-- `script.js` – renders plans, handles search + the signup form
+- `script.js` – renders plans and handles the search input
 - `assets/` – drop images here (e.g. `hero.jpg`)
 
 ## How to add / edit antenna plans
@@ -52,17 +52,12 @@ new plan, copy one and change the four fields:
 2. In `index.html` find the commented-out `<!-- <img class="hero__image"
    ... -->` line and remove the `<!--` / `-->`.
 
-### Wire up the Antenna Geeks mailing list
+### Antenna Geeks mailing list
 
-The form is currently a placeholder. To make it live:
-
-1. Sign up for a form provider – [Formspree](https://formspree.io),
-   [Buttondown](https://buttondown.email), or similar. They give you a
-   URL.
-2. In `index.html`, find `<form class="signup" action="#" ...>` and:
-   - Replace `action="#"` with the provider's endpoint URL.
-   - Remove `data-placeholder="true"`.
-3. Commit and push.
+The signup button is a `mailto:` link that opens the visitor's email
+client with a pre-written "I would like to join the email list"
+message addressed to `greg@kj6er.net`. No third-party form provider
+required. If you ever want an inline form instead, ask me.
 
 ## Local preview
 
