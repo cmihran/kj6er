@@ -9,9 +9,6 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   const container = document.getElementById("plans-container");
   if (!container || typeof PLANS === "undefined") return;
 
-  const countEl = document.getElementById("plans-total");
-  if (countEl) countEl.textContent = String(PLANS.length);
-
   const order = (typeof CATEGORY_ORDER !== "undefined" && CATEGORY_ORDER) || [];
   const groups = new Map();
   order.forEach((c) => groups.set(c, []));
