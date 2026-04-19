@@ -78,4 +78,11 @@ Push to `main`. The GitHub Action publishes to Pages.
 
 Live at **https://cmihran.github.io/kj6er/**.
 
+## Credits
+
+The faint world map behind the QSL-card header uses
+[simple-world-map](https://github.com/flekschas/simple-world-map) by
+Al MacDonald / Fritz Lekschas, licensed under
+[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+
 73 de KJ6ER.

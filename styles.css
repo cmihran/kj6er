@@ -93,6 +93,7 @@ a:focus-visible {
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
   background:
+    url("assets/world-map.svg") center center / min(92%, 720px) no-repeat,
     linear-gradient(180deg, var(--paper-2) 0%, var(--paper) 100%);
 }
 .qsl-card::before,
