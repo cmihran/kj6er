@@ -38,7 +38,7 @@ new plan, copy one and change the four fields:
 ## How to edit the rest
 
 - **Bio**: edit the `<section ... id="about">` block in `index.html`.
-- **Contact email**: search for `gmihran@me.com` in `index.html` and
+- **Contact email**: search for `greg@kj6er.net` in `index.html` and
   replace if it changes.
 - **QRZ link**: already set to `https://www.qrz.com/db/KJ6ER`.
 - **Donation link**: search for `data-donate-link` in `index.html` and
