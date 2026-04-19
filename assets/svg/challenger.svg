@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Challenger off-center-fed halfwave vertical">
+  <!-- ground line -->
+  <line x1="20" y1="170" x2="300" y2="170" stroke="#1c1812" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.45"/>
+
+  <!-- ground spike -->
+  <path d="M 160 170 L 156 184 L 164 184 Z" fill="#1c1812" opacity="0.7"/>
+
+  <!-- mast / base section -->
+  <line x1="160" y1="170" x2="160" y2="155" stroke="#1c1812" stroke-width="2.4"/>
+
+  <!-- whip — full halfwave, taller -->
+  <line x1="160" y1="155" x2="160" y2="14" stroke="#1f5967" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="160" cy="14" r="2.2" fill="#1f5967"/>
+
+  <!-- OCF feedpoint box -->
+  <rect x="153" y="118" width="14" height="9" fill="#efe6cd" stroke="#1c1812" stroke-width="0.9"/>
+
+  <!-- coax dropping from feedpoint -->
+  <path d="M 160 127 Q 178 145, 205 168" stroke="#1c1812" stroke-width="0.9" fill="none"/>
+
+  <!-- length label -->
+  <text x="172" y="60" font-family="IBM Plex Mono, monospace" font-size="8" fill="#1f5967" letter-spacing="0.06em">½λ</text>
+  <text x="172" y="125" font-family="IBM Plex Mono, monospace" font-size="7" fill="#1c1812" opacity="0.7">OCF</text>
+</svg>

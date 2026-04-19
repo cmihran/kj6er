@@ -36,75 +36,55 @@
   </header>
 
   <main>
-    <!-- ===== About ===== -->
-    <section class="panel" id="about">
-      <h2 class="panel__title">About Me</h2>
-      <p>
-        I'm Greg Mihran, KJ6ER, writing from Silicon Valley. I've been a
-        licensed amateur since 1987 and now spend most of my time designing
-        portable antennas for the every-ham.
-      </p>
-      <p class="mission">
-        My mission is to design efficient and effective portable antennas
-        focused on the optimal integration of performance (high radiation
-        efficiency), elegance (speed and simplicity of deployment), and
-        convenience (ease of transport and storage). These designs are
-        always shared for free with the global amateur radio community to
-        encourage more operators to homebrew their own portable antennas.
-      </p>
-      <p>
-        Building ham radio antennas is our last homebrewing frontier, and
-        I'm dedicated to helping you do so successfully. As always, feel
-        free to reach out if you ever have any questions. I'd be happy to
-        help. Keep having fun out there! 73.
-      </p>
-    </section>
-
-    <!-- ===== Antenna Geeks email signup ===== -->
-    <section class="panel panel--accent" id="subscribe">
-      <h2 class="panel__title">Antenna Geeks Email List</h2>
+    <!-- ===== Featured Designs (visual centerpiece) =====
+         Replace each <img src="assets/svg/*.svg"> with a real photo
+         when ready (assets/performer.jpg, etc.) and update the path. -->
+    <section class="panel" id="featured-designs">
+      <h2 class="panel__title">Featured Designs</h2>
       <p class="panel__lead">
-        Sign up and you'll be the first to receive new KJ6ER antenna designs
-        and updates. Dear Fellow Portable Antenna Geeks, welcome aboard.
+        Three flagship portable antennas. PDFs free, kits available on Etsy.
       </p>
-
-      <!--
-        PLACEHOLDER form. To wire it up:
-        1. Pick a provider (Formspree, Buttondown, Mailchimp, etc.)
-        2. Replace action="#" with the provider's endpoint URL.
-        3. Remove data-placeholder="true" below.
-      -->
-      <form class="signup" action="#" method="POST" data-placeholder="true" novalidate>
-        <label class="signup__label" for="email">Email address</label>
-        <div class="signup__row">
-          <input
-            class="signup__input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="you@example.com"
-            autocomplete="email"
-            required
-          />
-          <button class="signup__button" type="submit">Join</button>
-        </div>
-        <p class="signup__status" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-
-    <!-- ===== Shop (Etsy) ===== -->
-    <section class="panel" id="shop">
-      <h2 class="panel__title">Shop Assembled Antennas</h2>
-      <p class="panel__lead">
-        New to the hobby and don't want to build your own? You can buy
-        handmade, assembled versions of my PERformer antenna system at the
-        J-Systems KJ6ER store on Etsy, used by thousands of Parks On The
-        Air (POTA) activators all over the world. The plans on this site
-        are, and always will be, free.
-      </p>
-      <a class="shop__cta" href="https://www.etsy.com/shop/JSystems" target="_blank" rel="noopener">
-        Visit J-Systems on Etsy <span aria-hidden="true">&#8599;</span>
-      </a>
+      <ul class="designs">
+        <li class="design design--performer">
+          <a class="design__link" href="https://bit.ly/KJ6ERPERformer" target="_blank" rel="noopener">
+            <div class="design__image">
+              <img src="assets/svg/performer.svg" alt="" />
+            </div>
+            <div class="design__body">
+              <span class="design__eyebrow">Quarterwave Vertical</span>
+              <h3 class="design__name">PERformer</h3>
+              <p class="design__specs">40M&ndash;6M &middot; portable, elevated, resonant</p>
+              <span class="design__cta">Download PDF <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
+        </li>
+        <li class="design design--challenger">
+          <a class="design__link" href="https://bit.ly/KJ6ERChallenger" target="_blank" rel="noopener">
+            <div class="design__image">
+              <img src="assets/svg/challenger.svg" alt="" />
+            </div>
+            <div class="design__body">
+              <span class="design__eyebrow">Halfwave Vertical</span>
+              <h3 class="design__name">Challenger</h3>
+              <p class="design__specs">20M&ndash;6M &middot; off-center-fed</p>
+              <span class="design__cta">Download PDF <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
+        </li>
+        <li class="design design--dominator">
+          <a class="design__link" href="https://bit.ly/KJ6ERDominator" target="_blank" rel="noopener">
+            <div class="design__image">
+              <img src="assets/svg/dominator.svg" alt="" />
+            </div>
+            <div class="design__body">
+              <span class="design__eyebrow">Halfwave + Parasitic</span>
+              <h3 class="design__name">Dominator</h3>
+              <p class="design__specs">17M&ndash;10M &middot; end-fed, 2-element directional</p>
+              <span class="design__cta">Download PDF <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </a>
+        </li>
+      </ul>
     </section>
 
     <!-- ===== Antenna plans ===== -->
@@ -141,9 +121,77 @@
       </p>
     </section>
 
-    <!-- ===== Featured ===== -->
+    <!-- ===== Antenna Geeks email signup ===== -->
+    <section class="panel panel--accent" id="subscribe">
+      <h2 class="panel__title">Antenna Geeks Email List</h2>
+      <p class="panel__lead">
+        Sign up and you'll be first to get new KJ6ER antenna designs and
+        updates. Welcome aboard, fellow Antenna Geek.
+      </p>
+
+      <!--
+        PLACEHOLDER form. To wire it up:
+        1. Pick a provider (Formspree, Buttondown, Mailchimp, etc.)
+        2. Replace action="#" with the provider's endpoint URL.
+        3. Remove data-placeholder="true" below.
+      -->
+      <form class="signup" action="#" method="POST" data-placeholder="true" novalidate>
+        <label class="signup__label" for="email">Email address</label>
+        <div class="signup__row">
+          <input
+            class="signup__input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+          <button class="signup__button" type="submit">Join</button>
+        </div>
+        <p class="signup__status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ===== Shop (Etsy) ===== -->
+    <section class="panel" id="shop">
+      <h2 class="panel__title">Shop Assembled Antennas</h2>
+      <p class="panel__lead">
+        Don't want to build your own? You can buy assembled versions of the
+        PERformer system at the J-Systems KJ6ER store on Etsy, used by
+        thousands of POTA activators worldwide. The plans here are, and
+        always will be, free.
+      </p>
+      <a class="shop__cta" href="https://www.etsy.com/shop/JSystems" target="_blank" rel="noopener">
+        Visit J-Systems on Etsy <span aria-hidden="true">&#8599;</span>
+      </a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="panel" id="about">
+      <h2 class="panel__title">About Me</h2>
+      <p>
+        I'm Greg Mihran, KJ6ER, writing from Silicon Valley. Licensed since
+        1987, Amateur Extra. After 45 years in tech I retired in 2022 to
+        design portable antennas full-time.
+      </p>
+      <p class="mission">
+        My mission is to design efficient and effective portable antennas
+        that integrate performance (high radiation efficiency), elegance
+        (speed and simplicity of deployment), and convenience (ease of
+        transport and storage). These designs are always shared for free
+        with the global amateur radio community to encourage more operators
+        to homebrew their own.
+      </p>
+      <p>
+        Reach out anytime. Building antennas is our last homebrewing
+        frontier and I'm here to help. 73.
+      </p>
+    </section>
+
+    <!-- ===== Press & Interviews ===== -->
     <section class="panel" id="featured">
-      <h2 class="panel__title">Featured</h2>
+      <h2 class="panel__title">Press &amp; Interviews</h2>
       <p class="panel__lead">
         A few places the KJ6ER designs have shown up.
       </p>

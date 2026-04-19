@@ -234,6 +234,98 @@ main {
 }
 
 /* =========================================================
+   Featured Designs (visual cards)
+   ========================================================= */
+.designs {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.design { display: flex; }
+
+.design__link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent, var(--ink));
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  overflow: hidden;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.design__link:hover,
+.design__link:focus-visible {
+  border-color: var(--accent, var(--ink));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(28, 24, 18, 0.10);
+  outline: none;
+  text-decoration: none;
+}
+
+.design--performer  { --accent: var(--teal); }
+.design--challenger { --accent: var(--stamp); }
+.design--dominator  { --accent: var(--copper); }
+
+.design__image {
+  background: linear-gradient(180deg, var(--paper-2) 0%, var(--paper) 100%);
+  border-bottom: 1px solid var(--rule);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+}
+.design__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.design__body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.design__eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent, var(--muted));
+}
+.design__name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.3em;
+  letter-spacing: -0.02em;
+  margin: 4px 0 2px;
+  color: var(--ink);
+}
+.design__specs {
+  font-family: var(--mono);
+  font-size: 0.82em;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.design__cta {
+  margin-top: auto;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent, var(--stamp));
+}
+
+/* =========================================================
    Plans — grouped, searchable, scrollable card
    ========================================================= */
 .plans-toolbar { margin: 6px 0 14px; }
