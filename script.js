@@ -96,29 +96,3 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   });
 })();
 
-// =========================================================
-// Style variant toggle + persistence
-// =========================================================
-(function styleToggle() {
-  const STORAGE_KEY = "kj6er:style";
-  const here =
-    document.body.dataset.variant === "modern" ? "modern" : "retro";
-
-  // Save the user's current view as their preference when they arrive.
-  // Only update when explicitly toggled — see handler below.
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    // First-visit: persist default so the toggle has something to toggle against.
-    if (!saved) localStorage.setItem(STORAGE_KEY, here);
-  } catch (_) {}
-
-  const toggle = document.querySelector("[data-style-toggle]");
-  if (!toggle) return;
-  toggle.addEventListener("click", (e) => {
-    try {
-      const next = here === "modern" ? "retro" : "modern";
-      localStorage.setItem(STORAGE_KEY, next);
-    } catch (_) {}
-    // Let the normal link navigation happen.
-  });
-})();
