@@ -22,9 +22,6 @@
   <circle cx="60" cy="160" r="1.6" fill="#1c1812"/>
   <circle cx="260" cy="160" r="1.6" fill="#1c1812"/>
 
-  <!-- coax going to ground -->
-  <path d="M 160 129 Q 175 145, 200 168" stroke="#1c1812" stroke-width="0.9" fill="none"/>
-
   <!-- band labels along whip -->
   <text x="172" y="48" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8a2a1a" letter-spacing="0.06em">¼λ</text>
 </svg>
