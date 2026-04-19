@@ -9,8 +9,8 @@
   <line x1="160" y1="170" x2="160" y2="127" stroke="#1c1812" stroke-width="2.4"/>
 
   <!-- whip — full halfwave, taller -->
-  <line x1="160" y1="127" x2="160" y2="14" stroke="#1f5967" stroke-width="2.2" stroke-linecap="round"/>
-  <circle cx="160" cy="14" r="2.2" fill="#1f5967"/>
+  <line x1="160" y1="127" x2="160" y2="14" stroke="#b8b8b8" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="160" cy="14" r="2.2" fill="#b8b8b8"/>
 
   <!-- OCF feedpoint box -->
   <rect x="153" y="118" width="14" height="9" fill="#efe6cd" stroke="#1c1812" stroke-width="0.9"/>
