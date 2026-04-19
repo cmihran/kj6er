@@ -6,10 +6,10 @@
   <path d="M 160 170 L 156 184 L 164 184 Z" fill="#1c1812" opacity="0.7"/>
 
   <!-- mast / base section -->
-  <line x1="160" y1="170" x2="160" y2="155" stroke="#1c1812" stroke-width="2.4"/>
+  <line x1="160" y1="170" x2="160" y2="127" stroke="#1c1812" stroke-width="2.4"/>
 
   <!-- whip — full halfwave, taller -->
-  <line x1="160" y1="155" x2="160" y2="14" stroke="#1f5967" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="160" y1="127" x2="160" y2="14" stroke="#1f5967" stroke-width="2.2" stroke-linecap="round"/>
   <circle cx="160" cy="14" r="2.2" fill="#1f5967"/>
 
   <!-- OCF feedpoint box -->
