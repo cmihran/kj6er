@@ -19,6 +19,11 @@
   --stamp-2:    #6d200f;
   --copper:     #8a5a18;   /* warm brass */
   --copper-2:   #5e3d0e;
+  --teal:       #1f5967;   /* vintage technical blue */
+  --teal-2:     #164653;
+  --teal-soft:  rgba(31, 89, 103, 0.10);
+  --olive:      #4f6236;   /* muted printed-page green */
+  --olive-2:    #394726;
 
   --body:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --display:    "Space Grotesk", "Inter", system-ui, sans-serif;
@@ -112,16 +117,20 @@ a:focus-visible {
   color: var(--muted);
 }
 .qsl-corner--tl { top: 14px; left: 16px; }
-.qsl-corner--tr { top: 14px; right: 16px; }
+.qsl-corner--tr { top: 14px; right: 16px; color: var(--stamp); }
 .qsl-corner--bl { bottom: 14px; left: 16px; }
-.qsl-corner--br { bottom: 14px; right: 16px; }
+.qsl-corner--br { bottom: 14px; right: 16px; color: var(--teal); }
 
 .hero__eyebrow {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 5px 14px;
+  border: 1.5px solid var(--stamp);
+  border-radius: 2px;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  margin: 0 0 10px;
   color: var(--stamp);
 }
 .hero__callsign {
@@ -176,15 +185,17 @@ main {
 .panel--accent {
   margin-top: 20px;
   padding: 26px 22px;
-  border: 1px solid var(--ink);
-  background: var(--paper-2);
+  border: 1px solid var(--teal);
+  background:
+    linear-gradient(180deg, var(--teal-soft), rgba(31, 89, 103, 0.03)),
+    var(--paper);
   position: relative;
 }
 .panel--accent::before {
   content: "";
   position: absolute;
   inset: 4px;
-  border: 1px solid var(--rule);
+  border: 1px solid rgba(31, 89, 103, 0.28);
   pointer-events: none;
 }
 
@@ -271,13 +282,20 @@ main {
 }
 #plans-container::-webkit-scrollbar-thumb:hover { background: var(--copper); }
 
-.plan-group { margin: 22px 0; }
+.plan-group { margin: 22px 0; --cat: var(--muted); }
 .plan-group:first-child { margin-top: 4px; }
 .plan-group:last-child { margin-bottom: 4px; }
 
+/* Category accent colors — cycle in source order. Stable even when
+   groups are hidden by the search filter (nth-of-type doesn't re-index). */
+.plan-group:nth-of-type(1) { --cat: var(--olive); }   /* Primers & Reference */
+.plan-group:nth-of-type(2) { --cat: var(--teal); }    /* Quarterwave */
+.plan-group:nth-of-type(3) { --cat: var(--stamp); }   /* Halfwave */
+.plan-group:nth-of-type(4) { --cat: var(--copper); }  /* Arrays */
+
 .plan-group__title {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   margin: 0 0 12px;
   padding-bottom: 6px;
@@ -289,12 +307,20 @@ main {
   color: var(--muted);
   border-bottom: 1px solid var(--rule-soft);
 }
+.plan-group__title::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--cat);
+  flex: 0 0 auto;
+}
 .plan-group__name { color: var(--ink); }
 .plan-group__count {
   margin-left: auto;
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--muted-2);
+  color: var(--cat);
   letter-spacing: 0;
 }
 
@@ -468,8 +494,8 @@ main {
 }
 .featured li a:hover,
 .featured li a:focus-visible {
-  border-color: var(--ink);
-  background: var(--paper-2);
+  border-color: var(--teal);
+  background: var(--teal-soft);
   transform: translateY(-1px);
   text-decoration: none;
   outline: none;
@@ -479,7 +505,7 @@ main {
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--stamp);
+  color: var(--teal);
 }
 .featured__title {
   font-family: var(--body);
