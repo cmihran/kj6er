@@ -21,6 +21,7 @@
   --copper-2:   #5e3d0e;
 
   --serif:      "Fraunces", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --display:    "Space Grotesk", "Inter", system-ui, sans-serif;
   --mono:       "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
   --radius:     3px;
@@ -158,12 +159,11 @@ a:focus-visible {
   color: var(--stamp);
 }
 .hero__callsign {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 700;
-  font-variation-settings: "SOFT" 100, "WONK" 0, "opsz" 144;
   font-size: clamp(64px, 14vw, 132px);
   line-height: 0.95;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   margin: 8px 0 10px;
   color: var(--ink);
 }
