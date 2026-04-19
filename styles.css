@@ -431,6 +431,92 @@ main {
 .signup__status.is-error { color: var(--stamp); font-style: normal; }
 
 /* =========================================================
+   About — mission pull-quote
+   ========================================================= */
+.mission {
+  margin: 14px 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--stamp);
+  background: var(--paper-2);
+  color: var(--ink-2);
+  font-style: italic;
+}
+
+/* =========================================================
+   Featured — press & interview links
+   ========================================================= */
+.featured {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.featured li a {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.12s ease;
+}
+.featured li a:hover,
+.featured li a:focus-visible {
+  border-color: var(--ink);
+  background: var(--paper-2);
+  transform: translateY(-1px);
+  text-decoration: none;
+  outline: none;
+}
+.featured__pub {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stamp);
+}
+.featured__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--ink);
+}
+@media (max-width: 500px) {
+  .featured li a { grid-template-columns: 1fr; gap: 2px; padding: 12px 14px; }
+}
+
+/* =========================================================
+   Programs — Heroes + Beta Testers
+   ========================================================= */
+.programs {
+  display: grid;
+  gap: 12px;
+  margin-top: 4px;
+}
+.program {
+  padding: 16px 18px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+.program__title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05em;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.program p { margin: 0; color: var(--ink-2); font-size: 0.98em; }
+
+@media (min-width: 640px) {
+  .programs { grid-template-columns: 1fr 1fr; gap: 14px; }
+}
+
+/* =========================================================
    Shop CTA
    ========================================================= */
 .shop__cta {
