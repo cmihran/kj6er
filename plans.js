@@ -1,12 +1,12 @@
 // =========================================================
-// Antenna plans data — edit this file to add/update plans.
+// Antenna plans data. Edit this file to add/update plans.
 // index.html reads from here.
 // =========================================================
 //
 // To add a plan, copy an entry and change the four fields:
 //   name:     short title shown on the card
 //   specs:    one-line description (bands, length, notes)
-//   category: which group the plan belongs to — must match a
+//   category: which group the plan belongs to, must match a
 //             name in CATEGORY_ORDER below, or add a new one
 //   href:     bit.ly link to the PDF
 

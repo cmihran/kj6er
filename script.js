@@ -91,7 +91,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     }
     status.classList.remove("is-error");
     status.textContent =
-      "Thanks! Antenna Geeks isn't wired up yet — check back soon. 73.";
+      "Thanks! Antenna Geeks isn't wired up yet. Check back soon. 73.";
     input.value = "";
   });
 })();

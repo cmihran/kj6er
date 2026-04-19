@@ -1,6 +1,6 @@
 # KJ6ER
 
-Small static site for Greg Mihran (KJ6ER) — home of the POTA PERformer,
+Small static site for Greg Mihran (KJ6ER): home of the POTA PERformer,
 Challenger, and Dominator antenna plans, plus an "Antenna Geeks" mailing
 list.
 
