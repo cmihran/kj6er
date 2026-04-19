@@ -178,14 +178,14 @@ main {
 }
 
 .panel {
-  padding: 28px 0 10px;
+  padding: 44px 0 10px;
   border-top: 1px solid var(--rule);
 }
-.panel:first-of-type { border-top: 0; }
+.panel:first-of-type { border-top: 0; padding-top: 32px; }
 
 .panel--accent {
-  margin-top: 20px;
-  padding: 26px 22px;
+  margin-top: 28px;
+  padding: 32px 24px 28px;
   border: 1px solid var(--teal);
   background:
     linear-gradient(180deg, var(--teal-soft), rgba(31, 89, 103, 0.03)),
@@ -200,25 +200,54 @@ main {
   pointer-events: none;
 }
 
-.panel__title {
+.panel__header {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+.panel__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--icon-bg, rgba(28, 24, 18, 0.06));
+  color: var(--icon-color, var(--stamp));
+  flex: 0 0 auto;
+}
+.panel__icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.panel__title {
   font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(22px, 2.2vw + 12px, 30px);
+  font-weight: 700;
+  font-size: clamp(22px, 1.8vw + 14px, 30px);
   letter-spacing: -0.02em;
-  margin: 0 0 6px;
+  line-height: 1.15;
+  margin: 0;
   color: var(--ink);
 }
-.panel__title::before {
-  content: "";
-  width: 14px;
-  height: 2px;
-  background: var(--stamp);
-  margin-right: 2px;
-  align-self: center;
-}
+
+/* Section-specific icon colors */
+#featured-designs .panel__icon { --icon-bg: rgba(31, 89, 103, 0.10); --icon-color: var(--teal); }
+#plans .panel__icon            { --icon-bg: rgba(138, 42, 26, 0.10); --icon-color: var(--stamp); }
+#subscribe .panel__icon        { --icon-bg: rgba(31, 89, 103, 0.14); --icon-color: var(--teal); }
+#shop .panel__icon             { --icon-bg: rgba(138, 90, 24, 0.10); --icon-color: var(--copper); }
+#about .panel__icon            { --icon-bg: rgba(79, 98, 54, 0.10); --icon-color: var(--olive); }
+#featured .panel__icon         { --icon-bg: rgba(31, 89, 103, 0.10); --icon-color: var(--teal); }
+#programs .panel__icon         { --icon-bg: rgba(138, 90, 24, 0.10); --icon-color: var(--copper); }
+#donate .panel__icon           { --icon-bg: rgba(138, 42, 26, 0.10); --icon-color: var(--stamp); }
+#contact .panel__icon          { --icon-bg: rgba(79, 98, 54, 0.10); --icon-color: var(--olive); }
 
 .panel__lead {
   margin: 0 0 16px;
