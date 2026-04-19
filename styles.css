@@ -20,7 +20,7 @@
   --copper:     #8a5a18;   /* warm brass */
   --copper-2:   #5e3d0e;
 
-  --serif:      "Fraunces", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --body:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --display:    "Space Grotesk", "Inter", system-ui, sans-serif;
   --mono:       "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
@@ -48,8 +48,8 @@ body {
     ),
     var(--paper);
   color: var(--ink);
-  font-family: var(--serif);
-  font-size: clamp(16px, 0.5vw + 14px, 18px);
+  font-family: var(--body);
+  font-size: clamp(16px, 0.5vw + 14px, 17px);
   line-height: 1.6;
   min-height: 100dvh;
   overflow-x: hidden;
@@ -142,7 +142,7 @@ a:focus-visible {
   color: var(--ink-2);
 }
 .hero__tagline {
-  font-family: var(--serif);
+  font-family: var(--body);
   font-style: italic;
   font-size: clamp(15px, 1.2vw + 12px, 18px);
   margin: 10px auto 0;
@@ -192,10 +192,10 @@ main {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 600;
   font-size: clamp(22px, 2.2vw + 12px, 30px);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   margin: 0 0 6px;
   color: var(--ink);
 }
@@ -333,9 +333,10 @@ main {
 
 .plan__name {
   grid-area: name;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 600;
   font-size: 1.02em;
+  letter-spacing: -0.01em;
   color: var(--ink);
 }
 .plan__specs {
@@ -481,7 +482,7 @@ main {
   color: var(--stamp);
 }
 .featured__title {
-  font-family: var(--serif);
+  font-family: var(--body);
   font-weight: 500;
   color: var(--ink);
 }
@@ -504,9 +505,10 @@ main {
   background: var(--paper);
 }
 .program__title {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 600;
   font-size: 1.05em;
+  letter-spacing: -0.01em;
   margin: 0 0 8px;
   color: var(--ink);
 }
