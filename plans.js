@@ -33,7 +33,7 @@ const PLANS = [
   },
   {
     name: "Sporadic-E Propagation",
-    specs: "Leveraging Sporadic-E Propagation with KJ6ER 6-Meter Antennas",
+    specs: "Leveraging Sporadic-E with KJ6ER 6-Meter Antennas",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSporadicE",
   },
