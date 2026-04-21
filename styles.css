@@ -129,7 +129,7 @@ a:focus-visible {
   border: 1.5px solid var(--stamp);
   border-radius: 2px;
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--stamp);
