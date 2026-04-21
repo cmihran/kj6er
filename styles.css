@@ -112,7 +112,7 @@ a:focus-visible {
 .qsl-corner {
   position: absolute;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
