@@ -90,6 +90,7 @@ const PLANS = [
   },
   {
     name: "PERformer 2-Element Phased Array",
+    nameHtml: "PERformer 2-Element <u>Phased</u> Array",
     specs: "40M–6M · Bi/Directional Vertical Beam Variant",
     category: "Parasitic & Phased Arrays",
     href: "https://bit.ly/KJ6ERPhasedPERformerArray",
