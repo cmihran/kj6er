@@ -28,7 +28,7 @@ const PLANS = [
   },
   {
     name: "KJ6ER Antennas Primer",
-    specs: "In-depth Research, Analyses and Antennas Guide",
+    specs: "In-depth Research, Analyses and KJ6ER Antennas Guide",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERAntennasPrimer",
   },
