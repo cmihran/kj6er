@@ -107,7 +107,7 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERParasiticDominatorArray",
   },
   {
-    name: "Marauder",
+    name: "Marauder 2-Element Parasitic Array",
     specs: "20M–10M · Directional Moxon-Inspired Vertical Array",
     category: "Parasitic & Phased Arrays",
     href: "https://bit.ly/KJ6ERMarauder",
