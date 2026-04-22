@@ -14,6 +14,7 @@ const CATEGORY_ORDER = [
   "Primers & Reference",
   "Quarterwave Verticals",
   "Halfwave Verticals",
+  "Fullwave Verticals",
   "Parasitic & Phased Arrays",
 ];
 
@@ -64,6 +65,14 @@ const PLANS = [
     specs: "17M–10M end-fed halfwave vertical",
     category: "Halfwave Verticals",
     href: "https://bit.ly/KJ6ERDominator",
+  },
+
+  // ---- Fullwave Verticals ----
+  {
+    name: "Thruster",
+    specs: "20M–6M · Fullwave Triangular Loop",
+    category: "Fullwave Verticals",
+    comingSoon: true,
   },
 
   // ---- Parasitic & Phased Arrays ----

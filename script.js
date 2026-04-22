@@ -34,7 +34,17 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     html += `<ul class="plans">`;
     for (const p of items) {
       const searchBlob = esc((p.name + " " + p.category + " " + p.specs).toLowerCase());
-      html += `
+      if (p.comingSoon) {
+        html += `
+        <li class="plan plan--coming-soon" data-search="${searchBlob}">
+          <div class="plan__link" aria-disabled="true">
+            <span class="plan__name">${esc(p.name)}</span>
+            <span class="plan__specs">${esc(p.specs)}</span>
+            <span class="plan__cta">Coming Soon</span>
+          </div>
+        </li>`;
+      } else {
+        html += `
         <li class="plan" data-search="${searchBlob}">
           <a class="plan__link" href="${esc(p.href)}" target="_blank" rel="noopener">
             <span class="plan__name">${esc(p.name)}</span>
@@ -42,6 +52,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
             <span class="plan__cta">Download PDF <span aria-hidden="true">&rarr;</span></span>
           </a>
         </li>`;
+      }
     }
     html += `</ul></section>`;
   }
