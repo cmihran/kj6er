@@ -42,7 +42,7 @@ const PLANS = [
   // ---- Quarterwave Verticals ----
   {
     name: "PERformer",
-    specs: "40M–6M quarterwave vertical · elevated tuned linked radials",
+    specs: "40M–6M · Omni/Directional Elevated Tuned Linked Radials",
     category: "Quarterwave Verticals",
     href: "https://bit.ly/KJ6ERPERformer",
   },
