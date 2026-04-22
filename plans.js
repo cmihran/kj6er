@@ -95,6 +95,12 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERPhasedPERformerArray",
   },
   {
+    name: "Challenger 2-Element Parasitic Array",
+    specs: "20M–6M · Directional Off-Center Fed Vertical Beam Array",
+    category: "Parasitic & Phased Arrays",
+    href: "https://bit.ly/KJ6ERChallenger",
+  },
+  {
     name: "Dominator 2-Element Parasitic Array",
     specs: "17M–10M · Directional End-Fed Vertical Beam Array",
     category: "Parasitic & Phased Arrays",
