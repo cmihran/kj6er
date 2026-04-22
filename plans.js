@@ -96,7 +96,7 @@ const PLANS = [
   },
   {
     name: "Dominator 2-Element Parasitic Array",
-    specs: "17M–10M · Directional Vertical Beam Array",
+    specs: "17M–10M · Directional End-Fed Vertical Beam Array",
     category: "Parasitic & Phased Arrays",
     href: "https://bit.ly/KJ6ERParasiticDominatorArray",
   },
