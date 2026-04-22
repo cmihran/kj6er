@@ -70,7 +70,7 @@ const PLANS = [
   // ---- Fullwave Verticals ----
   {
     name: "Hammer",
-    specs: "20M–10M · Halfsquare Bidirectional",
+    specs: "20M–10M · Halfsquare Bidirectional with 9:1 Balun",
     category: "Fullwave Verticals",
     comingSoon: true,
   },
