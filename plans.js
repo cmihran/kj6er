@@ -84,7 +84,7 @@ const PLANS = [
   // ---- Parasitic & Phased Arrays ----
   {
     name: "PERformer 2-Element Parasitic Array",
-    specs: "40M–6M · parasitic beam configuration",
+    specs: "40M–6M · Directional Vertical Beam Array",
     category: "Parasitic & Phased Arrays",
     href: "https://bit.ly/KJ6ERParasiticPERformerArray",
   },
