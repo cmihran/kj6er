@@ -74,6 +74,12 @@ const PLANS = [
     category: "Fullwave Verticals",
     comingSoon: true,
   },
+  {
+    name: "Hammer",
+    specs: "20M–10M · Halfsquare Bidirectional",
+    category: "Fullwave Verticals",
+    comingSoon: true,
+  },
 
   // ---- Parasitic & Phased Arrays ----
   {
