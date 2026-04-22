@@ -62,7 +62,7 @@ const PLANS = [
   },
   {
     name: "Dominator",
-    specs: "17M–10M end-fed halfwave vertical",
+    specs: "17M–10M · Omnidirectional End-Fed with 49/56:1 Unun",
     category: "Halfwave Verticals",
     href: "https://bit.ly/KJ6ERDominator",
   },
