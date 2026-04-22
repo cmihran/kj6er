@@ -84,7 +84,7 @@ const PLANS = [
   // ---- Parasitic & Phased Arrays ----
   {
     name: "PERformer 2-Element Parasitic Array",
-    specs: "40M–6M · Directional Vertical Beam Array",
+    specs: "40M–6M · Directional Vertical Beam",
     category: "Parasitic & Phased Arrays",
     href: "https://bit.ly/KJ6ERParasiticPERformerArray",
   },
@@ -97,19 +97,19 @@ const PLANS = [
   },
   {
     name: "Challenger 2-Element Parasitic Array",
-    specs: "20M–6M · Directional Off-Center Fed Vertical Beam Array",
+    specs: "20M–6M · Directional Off-Center Fed Vertical Beam",
     category: "Parasitic & Phased Arrays",
     href: "https://bit.ly/KJ6ERChallenger",
   },
   {
     name: "Dominator 2-Element Parasitic Array",
-    specs: "17M–10M · Directional End-Fed Vertical Beam Array",
+    specs: "17M–10M · Directional End-Fed Vertical Beam",
     category: "Parasitic & Phased Arrays",
     href: "https://bit.ly/KJ6ERParasiticDominatorArray",
   },
   {
     name: "Marauder 2-Element Parasitic Array",
-    specs: "20M–10M · Directional Moxon-Inspired Vertical Array",
+    specs: "20M–10M · Directional Moxon-Inspired Vertical",
     category: "Parasitic & Phased Arrays",
     href: "https://bit.ly/KJ6ERMarauder",
   },
