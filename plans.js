@@ -22,7 +22,7 @@ const PLANS = [
   // ---- Primers & Reference ----
   {
     name: "KJ6ER Antennas Family",
-    specs: "Overview of the complete KJ6ER antenna design family",
+    specs: "Overview of the Complete KJ6ER Antenna Plans Portfolio",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERAntennasFamily",
   },
