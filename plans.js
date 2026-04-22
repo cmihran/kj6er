@@ -69,14 +69,14 @@ const PLANS = [
 
   // ---- Fullwave Verticals ----
   {
-    name: "Thruster",
-    specs: "20M–6M · Fullwave Triangular Loop",
+    name: "Hammer",
+    specs: "20M–10M · Halfsquare Bidirectional",
     category: "Fullwave Verticals",
     comingSoon: true,
   },
   {
-    name: "Hammer",
-    specs: "20M–10M · Halfsquare Bidirectional",
+    name: "Thruster",
+    specs: "20M–6M · Triangular Loop Bidirectional",
     category: "Fullwave Verticals",
     comingSoon: true,
   },
