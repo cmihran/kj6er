@@ -56,7 +56,7 @@ const PLANS = [
   // ---- Halfwave Verticals ----
   {
     name: "Challenger",
-    specs: "20M–6M OCF halfwave vertical",
+    specs: "20M–6M · Omnidirectional Off-Center Fed with 4:1 Unun",
     category: "Halfwave Verticals",
     href: "https://bit.ly/KJ6ERChallenger",
   },
