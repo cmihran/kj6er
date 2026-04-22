@@ -97,7 +97,7 @@ const PLANS = [
   },
   {
     name: "Challenger 2-Element Parasitic Array",
-    specs: "20M–6M · Directional Off-Center Fed Vertical Beam",
+    specs: "20M–6M · Directional Off-Center Fed Vertical Beam with 4:1 Unun",
     category: "Parasitic & Phased Arrays",
     href: "https://bit.ly/KJ6ERChallenger",
   },
