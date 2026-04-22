@@ -48,7 +48,7 @@ const PLANS = [
   },
   {
     name: "PERformer NVIS",
-    specs: "40M–6M quarterwave · high-angle NVIS variant",
+    specs: "40M–6M · Omnidirectional High Angle Radiation Variant",
     category: "Quarterwave Verticals",
     href: "https://bit.ly/KJ6ERPERformerNVIS",
   },
