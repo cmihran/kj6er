@@ -426,6 +426,7 @@ main {
   scrollbar-width: thin;
   scrollbar-color: var(--rule) transparent;
 }
+#newsletters-container { max-height: 280px; }
 #plans-container::-webkit-scrollbar,
 #newsletters-container::-webkit-scrollbar { width: 10px; }
 #plans-container::-webkit-scrollbar-track,
