@@ -16,10 +16,10 @@
 
   <!-- Eyebrow stamp -->
   <g transform="translate(600, 175)">
-    <rect x="-200" y="-26" width="400" height="44" fill="none" stroke="#8a2a1a" stroke-width="2" rx="2"/>
+    <rect x="-260" y="-26" width="520" height="44" fill="none" stroke="#8a2a1a" stroke-width="2" rx="2"/>
     <text x="0" y="6" text-anchor="middle"
           font-family="'IBM Plex Mono', ui-monospace, monospace"
-          font-size="18" letter-spacing="6" fill="#8a2a1a">LICENSED 1987 · ITU 6 · CQ 3</text>
+          font-size="18" letter-spacing="5" fill="#8a2a1a">LICENSED 1987 · ITU 6 · CQ 3</text>
   </g>
 
   <!-- Big callsign -->
