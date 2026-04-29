@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kj6er.net/sitemap.xml
