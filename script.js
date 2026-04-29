@@ -123,4 +123,25 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 })();
 
+// =========================================================
+// Newsletters filter
+// =========================================================
+(function setupNewslettersFilter() {
+  const input = document.getElementById("newsletters-search");
+  const container = document.getElementById("newsletters-container");
+  const emptyMsg = document.getElementById("newsletters-empty");
+  if (!input || !container) return;
+
+  input.addEventListener("input", () => {
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    container.querySelectorAll(".plan").forEach((p) => {
+      const match = !q || (p.dataset.search || "").includes(q);
+      p.hidden = !match;
+      if (match) visible++;
+    });
+    if (emptyMsg) emptyMsg.hidden = visible > 0;
+  });
+})();
+
 

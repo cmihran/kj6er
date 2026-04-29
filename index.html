@@ -440,36 +440,56 @@
       <p class="panel__lead">
         Browse past issues of the <em>Antenna Geeks</em> monthly newsletter.
       </p>
-      <ul class="plans">
-        <li class="plan">
-          <a class="plan__link" href="https://bit.ly/KJ6ERNewsletter2604" target="_blank" rel="noopener">
-            <span class="plan__name">April 2026</span>
-            <span class="plan__specs">Sporadic-E and 6M Antennas</span>
-            <span class="plan__cta">Read Newsletter <span aria-hidden="true">&rarr;</span></span>
-          </a>
-        </li>
-        <li class="plan">
-          <a class="plan__link" href="https://bit.ly/KJ6ERNewsletter2603" target="_blank" rel="noopener">
-            <span class="plan__name">March 2026</span>
-            <span class="plan__specs">KJ6ER Antennas Family</span>
-            <span class="plan__cta">Read Newsletter <span aria-hidden="true">&rarr;</span></span>
-          </a>
-        </li>
-        <li class="plan">
-          <a class="plan__link" href="https://bit.ly/KJ6ERNewsletter2602" target="_blank" rel="noopener">
-            <span class="plan__name">February 2026</span>
-            <span class="plan__specs">Marauder Parasitic Array</span>
-            <span class="plan__cta">Read Newsletter <span aria-hidden="true">&rarr;</span></span>
-          </a>
-        </li>
-        <li class="plan">
-          <a class="plan__link" href="https://bit.ly/KJ6ERNewsletter2601" target="_blank" rel="noopener">
-            <span class="plan__name">January 2026</span>
-            <span class="plan__specs">Dominator Parasitic Array</span>
-            <span class="plan__cta">Read Newsletter <span aria-hidden="true">&rarr;</span></span>
-          </a>
-        </li>
-      </ul>
+
+      <div class="plans-toolbar">
+        <label class="plans-search" for="newsletters-search">
+          <svg class="plans-search__icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            id="newsletters-search"
+            class="plans-search__input"
+            type="search"
+            placeholder="Filter by month or topic..."
+            autocomplete="off"
+          />
+        </label>
+      </div>
+
+      <div id="newsletters-container">
+        <ul class="plans">
+          <li class="plan" data-search="april 2026 sporadic-e and 6m antennas">
+            <a class="plan__link" href="https://bit.ly/KJ6ERNewsletter2604" target="_blank" rel="noopener">
+              <span class="plan__name">April 2026</span>
+              <span class="plan__specs">Sporadic-E and 6M Antennas</span>
+              <span class="plan__cta">Read Newsletter <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          </li>
+          <li class="plan" data-search="march 2026 kj6er antennas family">
+            <a class="plan__link" href="https://bit.ly/KJ6ERNewsletter2603" target="_blank" rel="noopener">
+              <span class="plan__name">March 2026</span>
+              <span class="plan__specs">KJ6ER Antennas Family</span>
+              <span class="plan__cta">Read Newsletter <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          </li>
+          <li class="plan" data-search="february 2026 marauder parasitic array">
+            <a class="plan__link" href="https://bit.ly/KJ6ERNewsletter2602" target="_blank" rel="noopener">
+              <span class="plan__name">February 2026</span>
+              <span class="plan__specs">Marauder Parasitic Array</span>
+              <span class="plan__cta">Read Newsletter <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          </li>
+          <li class="plan" data-search="january 2026 dominator parasitic array">
+            <a class="plan__link" href="https://bit.ly/KJ6ERNewsletter2601" target="_blank" rel="noopener">
+              <span class="plan__name">January 2026</span>
+              <span class="plan__specs">Dominator Parasitic Array</span>
+              <span class="plan__cta">Read Newsletter <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p id="newsletters-empty" class="panel__note" hidden>No newsletters match that filter.</p>
     </section>
 
     <!-- ===== Heroes & Beta Testers programs ===== -->
