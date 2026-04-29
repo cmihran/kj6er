@@ -59,6 +59,38 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
   container.innerHTML = html;
 
+  // --- JSON-LD: Plans ItemList (TechArticles) ---
+  try {
+    const items = PLANS
+      .filter((p) => !p.comingSoon && p.href)
+      .map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "TechArticle",
+          name: p.name,
+          description: p.specs,
+          url: p.href,
+          isAccessibleForFree: true,
+          author: {
+            "@type": "Person",
+            name: "Greg Mihran",
+            alternateName: "KJ6ER",
+          },
+        },
+      }));
+    const ld = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "KJ6ER Free Antenna Plans",
+      itemListElement: items,
+    };
+    const tag = document.createElement("script");
+    tag.type = "application/ld+json";
+    tag.textContent = JSON.stringify(ld);
+    document.head.appendChild(tag);
+  } catch (_) {}
+
   // --- Search ---
   const searchInput = document.getElementById("plans-search");
   const emptyMsg = document.getElementById("plans-empty");
