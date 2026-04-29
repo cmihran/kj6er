@@ -96,7 +96,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   const emptyMsg = document.getElementById("plans-empty");
   if (!searchInput) return;
 
-  searchInput.addEventListener("input", () => {
+  const applyFilter = () => {
     const q = searchInput.value.trim().toLowerCase();
     const plans = container.querySelectorAll(".plan");
     let visible = 0;
@@ -110,7 +110,17 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
       g.hidden = !any;
     });
     if (emptyMsg) emptyMsg.hidden = visible > 0;
-  });
+  };
+
+  searchInput.addEventListener("input", applyFilter);
+
+  // Pre-fill from ?q= so the SearchAction sitelinks search box deep-links work.
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
+  if (initialQuery) {
+    searchInput.value = initialQuery;
+    applyFilter();
+    document.getElementById("plans")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 })();
 
 

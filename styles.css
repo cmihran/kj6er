@@ -178,6 +178,35 @@ main {
   padding: 16px 20px 48px;
 }
 
+.sectionnav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  justify-content: center;
+  border-top: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.sectionnav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 2px 0;
+  border-bottom: 1px solid transparent;
+  transition: color 120ms, border-color 120ms;
+}
+.sectionnav a:hover,
+.sectionnav a:focus-visible {
+  color: var(--stamp);
+  border-bottom-color: var(--stamp);
+  outline: none;
+}
+
 .panel {
   padding: 44px 0 10px;
   border-top: 1px solid var(--rule);

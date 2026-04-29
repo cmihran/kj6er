@@ -34,6 +34,25 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- Structured data: WebSite + sitelinks search box -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KJ6ER",
+    "alternateName": "KJ6ER Antenna Plans",
+    "url": "https://kj6er.net/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://kj6er.net/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <!-- Structured data: Person -->
   <script type="application/ld+json">
   {
@@ -162,6 +181,18 @@
     </div>
   </header>
 
+  <nav class="sectionnav" aria-label="Sections">
+    <a href="#featured-designs">Designs</a>
+    <a href="#plans">Plans</a>
+    <a href="#shop">Shop</a>
+    <a href="#featured">Press</a>
+    <a href="#club-presentations">Clubs</a>
+    <a href="#programs">Heroes</a>
+    <a href="#donate">Donate</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <main>
     <p class="mission">
       My mission is to design efficient and effective portable antennas
@@ -192,7 +223,7 @@
         <li class="design design--performer">
           <a class="design__link" href="https://bit.ly/KJ6ERPERformer" target="_blank" rel="noopener">
             <div class="design__image">
-              <img src="assets/svg/performer.svg" alt="" />
+              <img src="assets/svg/performer.svg" alt="PERformer 40M-6M portable quarterwave vertical antenna" />
             </div>
             <div class="design__body">
               <span class="design__eyebrow">Quarterwave Vertical</span>
@@ -205,7 +236,7 @@
         <li class="design design--challenger">
           <a class="design__link" href="https://bit.ly/KJ6ERChallenger" target="_blank" rel="noopener">
             <div class="design__image">
-              <img src="assets/svg/challenger.svg" alt="" />
+              <img src="assets/svg/challenger.svg" alt="Challenger 20M-6M portable off-center fed halfwave vertical antenna" />
             </div>
             <div class="design__body">
               <span class="design__eyebrow">Halfwave Vertical</span>
@@ -218,7 +249,7 @@
         <li class="design design--dominator">
           <a class="design__link" href="https://bit.ly/KJ6ERDominator" target="_blank" rel="noopener">
             <div class="design__image">
-              <img src="assets/svg/dominator.svg" alt="" />
+              <img src="assets/svg/dominator.svg" alt="Dominator 17M-10M portable end-fed halfwave vertical antenna" />
             </div>
             <div class="design__body">
               <span class="design__eyebrow">Halfwave Vertical</span>
@@ -486,7 +517,7 @@
   <footer class="footer">
     <p>&copy; <span id="year"></span> &middot; KJ6ER &middot; Silicon Valley &middot; 73</p>
     <p class="footer__counter">
-      <img src="https://hits.sh/kj6er.net.svg?style=flat-square&label=Visits&color=1f5967&labelColor=111111" alt="Visit count" />
+      <img src="https://hits.sh/kj6er.net.svg?style=flat-square&label=Visits&color=1f5967&labelColor=111111" alt="Visit count" loading="lazy" decoding="async" />
     </p>
   </footer>
 
