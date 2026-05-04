@@ -416,7 +416,8 @@ main {
 .plans-search__input::placeholder { color: var(--muted-2); font-style: italic; }
 
 #plans-container,
-#newsletters-container {
+#newsletters-container,
+#ham-sites-container {
   max-height: min(62vh, 560px);
   overflow-y: auto;
   padding: 14px 18px;
@@ -426,19 +427,24 @@ main {
   scrollbar-width: thin;
   scrollbar-color: var(--rule) transparent;
 }
-#newsletters-container { max-height: 280px; }
+#newsletters-container,
+#ham-sites-container { max-height: 280px; }
 #plans-container::-webkit-scrollbar,
-#newsletters-container::-webkit-scrollbar { width: 10px; }
+#newsletters-container::-webkit-scrollbar,
+#ham-sites-container::-webkit-scrollbar { width: 10px; }
 #plans-container::-webkit-scrollbar-track,
-#newsletters-container::-webkit-scrollbar-track { background: transparent; }
+#newsletters-container::-webkit-scrollbar-track,
+#ham-sites-container::-webkit-scrollbar-track { background: transparent; }
 #plans-container::-webkit-scrollbar-thumb,
-#newsletters-container::-webkit-scrollbar-thumb {
+#newsletters-container::-webkit-scrollbar-thumb,
+#ham-sites-container::-webkit-scrollbar-thumb {
   background: var(--rule);
   border-radius: 999px;
   border: 2px solid var(--paper-2);
 }
 #plans-container::-webkit-scrollbar-thumb:hover,
-#newsletters-container::-webkit-scrollbar-thumb:hover { background: var(--copper); }
+#newsletters-container::-webkit-scrollbar-thumb:hover,
+#ham-sites-container::-webkit-scrollbar-thumb:hover { background: var(--copper); }
 
 .plan-group { margin: 22px 0; --cat: var(--muted); }
 .plan-group:first-child { margin-top: 4px; }
