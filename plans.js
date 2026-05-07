@@ -38,6 +38,12 @@ const PLANS = [
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSporadicE",
   },
+  {
+    name: "Operating During the Solar Minimum",
+    specs: "How to Operate during the Solar Minimum Coming in 2030",
+    category: "Primers & Reference",
+    href: "https://bit.ly/KJ6ERSolarMinimum",
+  },
 
   // ---- Quarterwave Verticals ----
   {
