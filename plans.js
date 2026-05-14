@@ -39,6 +39,12 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERSporadicE",
   },
   {
+    name: "Summer Field Day and KJ6ER Antennas",
+    specs: "Deploying KJ6ER Antennas during the ARRL Summer Field Day",
+    category: "Primers & Reference",
+    href: "https://bit.ly/KJ6ERSummerFieldDay",
+  },
+  {
     name: "Operating During the Solar Minimum",
     specs: "How to Operate during the Solar Minimum Coming in 2030",
     category: "Primers & Reference",
