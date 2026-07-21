@@ -33,6 +33,12 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERAntennasPrimer",
   },
   {
+    name: "KJ6ER Antennas Primer 2",
+    specs: "Antenna System Efficiency: Effective Radiated Power (ERP)",
+    category: "Primers & Reference",
+    href: "https://bit.ly/KJ6ERAntennasPrimer2",
+  },
+  {
     name: "Sporadic-E Propagation",
     specs: "Leveraging Sporadic-E with KJ6ER 6-Meter Antennas",
     category: "Primers & Reference",
