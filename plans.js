@@ -52,10 +52,10 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERSummerFieldDay",
   },
   {
-    name: "Operating During the Solar Minimum",
+    name: "Navigating the Summer Doldrums & Solar Minimum",
     specs: "How to Operate during the Solar Minimum Coming in 2030",
     category: "Primers & Reference",
-    href: "https://bit.ly/KJ6ERSolarMinimum",
+    href: "https://bit.ly/KJ6ERSummerDoldrums",
   },
 
   // ---- Quarterwave Verticals ----
