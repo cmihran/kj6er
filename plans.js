@@ -53,7 +53,7 @@ const PLANS = [
   },
   {
     name: "Navigating the Summer Doldrums & Solar Minimum",
-    specs: "How to Operate during the Solar Minimum Coming in 2030",
+    specs: "What are the Summer Doldrums and the Impending Solar Minimum",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSummerDoldrums",
   },
