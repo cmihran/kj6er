@@ -57,6 +57,12 @@ const PLANS = [
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSummerDoldrums",
   },
+  {
+    name: "How to Operate During the Solar Minimum",
+    specs: "Operating Strategies and a Playbook for the Solar Minimum",
+    category: "Primers & Reference",
+    href: "https://bit.ly/KJ6ERSolarMinimum",
+  },
 
   // ---- Quarterwave Verticals ----
   {
