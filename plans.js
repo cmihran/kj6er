@@ -52,7 +52,7 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERSporadicE",
   },
   {
-    name: "Summer Field Day and KJ6ER Antennas",
+    name: "Summer Field Day and Portable Antennas",
     specs: "Deploying KJ6ER Antennas during the ARRL Summer Field Day",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSummerFieldDay",
