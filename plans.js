@@ -65,7 +65,7 @@ const PLANS = [
   },
   {
     name: "How to Operate Successfully During the Solar Minimum",
-    specs: "Operating Strategies and a Playbook for the Solar Minimum",
+    specs: "Operating Strategies and Playbook for the Solar Minimum",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSolarMinimum",
   },
