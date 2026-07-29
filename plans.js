@@ -40,6 +40,12 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERAntennasPrimer2",
   },
   {
+    name: "Space Weather Metrics Guide",
+    specs: "Understanding the Most Important Space Weather Metrics",
+    category: "Primers & Reference",
+    href: "https://bit.ly/KJ6ERSpaceWeather",
+  },
+  {
     name: "Sporadic-E Propagation",
     specs: "Leveraging Sporadic-E with KJ6ER 6-Meter Antennas",
     category: "Primers & Reference",
