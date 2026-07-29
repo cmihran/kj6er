@@ -416,6 +416,7 @@ main {
 .plans-search__input::placeholder { color: var(--muted-2); font-style: italic; }
 
 #plans-container,
+#primers-container,
 #newsletters-container,
 #ham-sites-container,
 #featured-container {
@@ -431,16 +432,20 @@ main {
 #newsletters-container,
 #ham-sites-container { max-height: 280px; }
 #featured-container { max-height: 220px; }
-#plans-container { max-height: 342px; }
+#plans-container,
+#primers-container { max-height: 342px; }
 #plans-container::-webkit-scrollbar,
+#primers-container::-webkit-scrollbar,
 #newsletters-container::-webkit-scrollbar,
 #ham-sites-container::-webkit-scrollbar,
 #featured-container::-webkit-scrollbar { width: 10px; }
 #plans-container::-webkit-scrollbar-track,
+#primers-container::-webkit-scrollbar-track,
 #newsletters-container::-webkit-scrollbar-track,
 #ham-sites-container::-webkit-scrollbar-track,
 #featured-container::-webkit-scrollbar-track { background: transparent; }
 #plans-container::-webkit-scrollbar-thumb,
+#primers-container::-webkit-scrollbar-thumb,
 #newsletters-container::-webkit-scrollbar-thumb,
 #ham-sites-container::-webkit-scrollbar-thumb,
 #featured-container::-webkit-scrollbar-thumb {
@@ -449,6 +454,7 @@ main {
   border: 2px solid var(--paper-2);
 }
 #plans-container::-webkit-scrollbar-thumb:hover,
+#primers-container::-webkit-scrollbar-thumb:hover,
 #newsletters-container::-webkit-scrollbar-thumb:hover,
 #ham-sites-container::-webkit-scrollbar-thumb:hover,
 #featured-container::-webkit-scrollbar-thumb:hover { background: var(--copper); }
@@ -458,11 +464,12 @@ main {
 .plan-group:last-child { margin-bottom: 4px; }
 
 /* Category accent colors — cycle in source order. Stable even when
-   groups are hidden by the search filter (nth-of-type doesn't re-index). */
-.plan-group:nth-of-type(1) { --cat: var(--olive); }   /* Primers & Reference */
-.plan-group:nth-of-type(2) { --cat: var(--teal); }    /* Quarterwave */
-.plan-group:nth-of-type(3) { --cat: var(--stamp); }   /* Halfwave */
-.plan-group:nth-of-type(4) { --cat: var(--copper); }  /* Arrays */
+   groups are hidden by the search filter (nth-of-type doesn't re-index).
+   Scoped per-container since each container restarts its own nth-of-type count. */
+#primers-container .plan-group:nth-of-type(1) { --cat: var(--olive); } /* Primers & Reference */
+#plans-container .plan-group:nth-of-type(1) { --cat: var(--teal); }    /* Quarterwave */
+#plans-container .plan-group:nth-of-type(2) { --cat: var(--stamp); }   /* Halfwave */
+#plans-container .plan-group:nth-of-type(4) { --cat: var(--copper); }  /* Arrays */
 
 .plan-group__title {
   display: flex;

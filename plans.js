@@ -11,12 +11,13 @@
 //   href:     bit.ly link to the PDF
 
 const CATEGORY_ORDER = [
-  "Primers & Reference",
   "Quarterwave Verticals",
   "Halfwave Verticals",
   "Fullwave Verticals",
   "Parasitic & Phased Arrays",
 ];
+
+const PRIMERS_CATEGORY_ORDER = ["Primers & Reference"];
 
 const PLANS = [
   // ---- Primers & Reference ----
