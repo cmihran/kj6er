@@ -431,6 +431,7 @@ main {
 #newsletters-container,
 #ham-sites-container { max-height: 280px; }
 #featured-container { max-height: 220px; }
+#plans-container { max-height: 342px; }
 #plans-container::-webkit-scrollbar,
 #newsletters-container::-webkit-scrollbar,
 #ham-sites-container::-webkit-scrollbar,
