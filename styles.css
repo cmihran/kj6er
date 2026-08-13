@@ -419,6 +419,7 @@ main {
 #primers-container,
 #newsletters-container,
 #ham-sites-container,
+#music-container,
 #featured-container {
   max-height: min(62vh, 560px);
   overflow-y: auto;
@@ -430,7 +431,8 @@ main {
   scrollbar-color: var(--rule) transparent;
 }
 #newsletters-container,
-#ham-sites-container { max-height: 280px; }
+#ham-sites-container,
+#music-container { max-height: 280px; }
 #featured-container { max-height: 220px; }
 #plans-container,
 #primers-container { max-height: 342px; }
@@ -438,16 +440,19 @@ main {
 #primers-container::-webkit-scrollbar,
 #newsletters-container::-webkit-scrollbar,
 #ham-sites-container::-webkit-scrollbar,
+#music-container::-webkit-scrollbar,
 #featured-container::-webkit-scrollbar { width: 10px; }
 #plans-container::-webkit-scrollbar-track,
 #primers-container::-webkit-scrollbar-track,
 #newsletters-container::-webkit-scrollbar-track,
 #ham-sites-container::-webkit-scrollbar-track,
+#music-container::-webkit-scrollbar-track,
 #featured-container::-webkit-scrollbar-track { background: transparent; }
 #plans-container::-webkit-scrollbar-thumb,
 #primers-container::-webkit-scrollbar-thumb,
 #newsletters-container::-webkit-scrollbar-thumb,
 #ham-sites-container::-webkit-scrollbar-thumb,
+#music-container::-webkit-scrollbar-thumb,
 #featured-container::-webkit-scrollbar-thumb {
   background: var(--rule);
   border-radius: 999px;
@@ -457,6 +462,7 @@ main {
 #primers-container::-webkit-scrollbar-thumb:hover,
 #newsletters-container::-webkit-scrollbar-thumb:hover,
 #ham-sites-container::-webkit-scrollbar-thumb:hover,
+#music-container::-webkit-scrollbar-thumb:hover,
 #featured-container::-webkit-scrollbar-thumb:hover { background: var(--copper); }
 
 .plan-group { margin: 22px 0; --cat: var(--muted); }
