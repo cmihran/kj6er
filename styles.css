@@ -329,7 +329,7 @@ main {
 
 .design--performer  { --accent: var(--teal); }
 .design--challenger { --accent: var(--stamp); }
-.design--dominator  { --accent: var(--copper); }
+.design--marauder   { --accent: var(--copper); }
 
 .design__image {
   background: linear-gradient(180deg, var(--paper-2) 0%, var(--paper) 100%);
