@@ -23,12 +23,12 @@
   <path d="M 96 40 L 214 27.1" stroke="#8a2a1a" stroke-width="2.2" stroke-linecap="round"/>
   <path d="M 214 27.1 L 224 26" stroke="#c98a6a" stroke-width="2.2" stroke-linecap="round"/>
 
-  <!-- feedpoint / unun box at base of left mast -->
-  <rect x="89" y="140" width="14" height="9" fill="#efe6cd" stroke="#1c1812" stroke-width="0.9"/>
+  <!-- feedpoint / unun box just under the radiator, high on the left mast -->
+  <rect x="89" y="41" width="14" height="9" fill="#efe6cd" stroke="#1c1812" stroke-width="0.9"/>
 
-  <!-- feed wire up to radiator -->
-  <path d="M 96 140 L 96 40" stroke="#8a2a1a" stroke-width="1" stroke-dasharray="1.5 2" opacity="0.55"/>
+  <!-- short feed wire connecting unun to radiator -->
+  <path d="M 96 41 L 96 40" stroke="#8a2a1a" stroke-width="1" stroke-dasharray="1.5 2" opacity="0.55"/>
 
-  <!-- counterpoise wire drooping from feedpoint -->
-  <path d="M 89 145 Q 70 172, 30 168" stroke="#8a5a18" stroke-width="1.1" fill="none"/>
+  <!-- counterpoise wire drooping from base of mast -->
+  <path d="M 96 155 Q 70 172, 30 168" stroke="#8a5a18" stroke-width="1.1" fill="none"/>
 </svg>
