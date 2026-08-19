@@ -29,6 +29,6 @@
   <!-- short feed wire connecting unun to reflector -->
   <path d="M 96 101 L 96 100" stroke="#8a2a1a" stroke-width="1" stroke-dasharray="1.5 2" opacity="0.55"/>
 
-  <!-- counterpoise wire drooping from base of mast -->
-  <path d="M 96 155 Q 70 172, 30 168" stroke="#8a5a18" stroke-width="1.1" fill="none"/>
+  <!-- counterpoise wire drooping from the unun box -->
+  <path d="M 89 106 Q 70 172, 30 168" stroke="#8a5a18" stroke-width="1.1" fill="none"/>
 </svg>
