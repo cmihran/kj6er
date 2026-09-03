@@ -109,7 +109,7 @@ const PLANS = [
     name: "Thruster",
     specs: "20M–6M · Triangular Loop Bidirectional with 4:1 Balun",
     category: "Fullwave Verticals",
-    comingSoon: true,
+    href: "https://bit.ly/KJ6ERThruster",
   },
 
   // ---- Parasitic & Phased Arrays ----
