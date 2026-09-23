@@ -58,12 +58,6 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERSporadicE",
   },
   {
-    name: "Summer Field Day and Portable Antennas",
-    specs: "Deploying KJ6ER Antennas during the ARRL Summer Field Day",
-    category: "Primers & Reference",
-    href: "https://bit.ly/KJ6ERSummerFieldDay",
-  },
-  {
     name: "Navigating the Summer Doldrums & Solar Minimum",
     specs: "Understanding the Summer Doldrums and the Solar Minimum",
     category: "Primers & Reference",
@@ -74,6 +68,12 @@ const PLANS = [
     specs: "Operating Strategies and Playbook for the Solar Minimum",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSolarMinimum",
+  },
+  {
+    name: "Summer Field Day and Portable Antennas",
+    specs: "Deploying KJ6ER Antennas during the ARRL Summer Field Day",
+    category: "Primers & Reference",
+    href: "https://bit.ly/KJ6ERSummerFieldDay",
   },
 
   // ---- Quarterwave Verticals ----
