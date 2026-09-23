@@ -40,6 +40,12 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERAntennasPrimer2",
   },
   {
+    name: "Smith Chart: Making RF Impedance Visible",
+    specs: "An introduction to the Smith Chart and How To Use It",
+    category: "Primers & Reference",
+    href: "https://bit.ly/KJ6ERSmithChart",
+  },
+  {
     name: "Space Weather Metrics Guide",
     specs: "Understanding the Most Important Space Weather Metrics",
     category: "Primers & Reference",
