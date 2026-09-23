@@ -41,7 +41,7 @@ const PLANS = [
   },
   {
     name: "Smith Chart: Making RF Impedance Visible",
-    specs: "An introduction to the Smith Chart and How To Use It",
+    specs: "An Introduction to the Smith Chart and How To Use It",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSmithChart",
   },
