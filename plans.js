@@ -58,7 +58,7 @@ const PLANS = [
     href: "https://bit.ly/KJ6ERSporadicE",
   },
   {
-    name: "Navigating the Summer Doldrums & Solar Minimum",
+    name: "Summer Doldrums & Solar Minimum",
     specs: "Understanding the Summer Doldrums and the Solar Minimum",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSummerDoldrums",
