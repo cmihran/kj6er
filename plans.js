@@ -14,6 +14,7 @@ const CATEGORY_ORDER = [
   "Quarterwave Verticals",
   "Halfwave Verticals",
   "Fullwave Verticals",
+  "Non-Resonant Verticals",
   "Parasitic & Phased Arrays",
 ];
 
@@ -116,6 +117,14 @@ const PLANS = [
     specs: "20M–6M · Triangular Loop Bidirectional with 4:1 Balun",
     category: "Fullwave Verticals",
     href: "https://bit.ly/KJ6ERThruster",
+  },
+
+  // ---- Non-Resonant Verticals ----
+  {
+    name: "Majestic",
+    specs: "40M–6M · Non-Resonant, No-Touch Vertical with 9:1 Unun",
+    category: "Non-Resonant Verticals",
+    href: "https://bit.ly/KJ6ERMajestic",
   },
 
   // ---- Parasitic & Phased Arrays ----
