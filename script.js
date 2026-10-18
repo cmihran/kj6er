@@ -33,8 +33,9 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
       html += `<h3 class="plan-group__title"><span class="plan-group__name">${esc(category)}</span><span class="plan-group__count">${items.length}</span></h3>`;
       html += `<ul class="plans">`;
       for (const p of items) {
-        const searchBlob = esc((p.name + " " + p.category + " " + p.specs).toLowerCase());
-        const nameHtml = p.nameHtml || esc(p.name);
+        const searchBlob = esc((p.name + " " + p.category + " " + p.specs + (p.beta ? " beta" : "")).toLowerCase());
+        const nameHtml = (p.nameHtml || esc(p.name)) +
+          (p.beta ? ` <span class="plan__badge">Beta</span>` : "");
         if (p.comingSoon) {
           html += `
           <li class="plan plan--coming-soon" data-search="${searchBlob}">

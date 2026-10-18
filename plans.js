@@ -9,6 +9,7 @@
 //   category: which group the plan belongs to, must match a
 //             name in CATEGORY_ORDER below, or add a new one
 //   href:     bit.ly link to the PDF
+//   beta:     optional, set to true to show a BETA label on the card
 
 const CATEGORY_ORDER = [
   "Quarterwave Verticals",
@@ -45,6 +46,7 @@ const PLANS = [
     specs: "An Introduction to the Smith Chart and How To Use It",
     category: "Primers & Reference",
     href: "https://bit.ly/KJ6ERSmithChart",
+    beta: true,
   },
   {
     name: "Space Weather Metrics Guide",
@@ -125,6 +127,7 @@ const PLANS = [
     specs: "40M–6M · Non-Resonant, No-Touch Vertical with 9:1 Unun",
     category: "Non-Resonant Verticals",
     href: "https://bit.ly/KJ6ERMajestic",
+    beta: true,
   },
 
   // ---- Parasitic & Phased Arrays ----
