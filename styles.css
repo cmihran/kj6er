@@ -432,8 +432,12 @@ main {
   scrollbar-color: var(--rule) transparent;
 }
 #newsletters-container,
-#ham-sites-container,
-#music-container { max-height: 280px; }
+#ham-sites-container { max-height: 280px; }
+/* Tall enough for three song cards with their Lyrics strips */
+#music-container { max-height: 404px; }
+@media (max-width: 600px) {
+  #music-container { max-height: 524px; }
+}
 #music-container:has(.lyrics[open]) { max-height: min(75vh, 640px); }
 #featured-container { max-height: 220px; }
 #plans-container,
