@@ -621,6 +621,15 @@ main {
   color: var(--ink-2);
 }
 .lyrics__body p { margin: 12px 0 0; }
+/* Song graphic: a second strip stacked under Lyrics */
+.lyrics:has(+ .lyrics) { border-radius: 0; }
+.lyrics--graphic .lyrics__body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 12px;
+  border-radius: var(--radius);
+}
 .lyrics__credit {
   font-family: var(--mono);
   font-size: 11px;
