@@ -127,7 +127,6 @@ const PLANS = [
     specs: "40M–6M · Non-Resonant, No-Touch Vertical with 9:1 Unun",
     category: "Non-Resonant Verticals",
     href: "https://bit.ly/KJ6ERMajestic",
-    beta: true,
   },
 
   // ---- Parasitic & Phased Arrays ----
